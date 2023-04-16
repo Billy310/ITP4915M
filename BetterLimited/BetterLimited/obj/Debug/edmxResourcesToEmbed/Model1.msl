@@ -1,0 +1,333 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="betterlimitedModelStoreContainer" CdmEntityContainer="betterlimitedEntities_Test1">
+    <EntitySetMapping Name="customers">
+      <EntityTypeMapping TypeName="betterlimitedModel.customer">
+        <MappingFragment StoreEntitySet="customer">
+          <ScalarProperty Name="EmailAddress" ColumnName="EmailAddress" />
+          <ScalarProperty Name="Districts" ColumnName="Districts" />
+          <ScalarProperty Name="Region" ColumnName="Region" />
+          <ScalarProperty Name="AddressLine3" ColumnName="AddressLine3" />
+          <ScalarProperty Name="AddressLine2" ColumnName="AddressLine2" />
+          <ScalarProperty Name="AddressLine1" ColumnName="AddressLine1" />
+          <ScalarProperty Name="Phone2" ColumnName="Phone2" />
+          <ScalarProperty Name="Phone1" ColumnName="Phone1" />
+          <ScalarProperty Name="ContactPersion" ColumnName="ContactPersion" />
+          <ScalarProperty Name="CompanyName" ColumnName="CompanyName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="CustomerID" ColumnName="CustomerID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="defectitems">
+      <EntityTypeMapping TypeName="betterlimitedModel.defectitem">
+        <MappingFragment StoreEntitySet="defectitem">
+          <ScalarProperty Name="dateofreturn" ColumnName="dateofreturn" />
+          <ScalarProperty Name="Handle" ColumnName="Handle" />
+          <ScalarProperty Name="SupplierReply" ColumnName="SupplierReply" />
+          <ScalarProperty Name="RefundAmount" ColumnName="RefundAmount" />
+          <ScalarProperty Name="HandleMethod" ColumnName="HandleMethod" />
+          <ScalarProperty Name="Reason" ColumnName="Reason" />
+          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+          <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+          <ScalarProperty Name="SaleOrderID" ColumnName="SaleOrderID" />
+          <ScalarProperty Name="defectItemID" ColumnName="defectItemID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="deliveryorders">
+      <EntityTypeMapping TypeName="betterlimitedModel.deliveryorder">
+        <MappingFragment StoreEntitySet="deliveryorder">
+          <ScalarProperty Name="DeliveryProductID_10qty" ColumnName="DeliveryProductID_10qty" />
+          <ScalarProperty Name="DeliveryProductID_9qty" ColumnName="DeliveryProductID_9qty" />
+          <ScalarProperty Name="DeliveryProductID_8qty" ColumnName="DeliveryProductID_8qty" />
+          <ScalarProperty Name="DeliveryProductID_7qty" ColumnName="DeliveryProductID_7qty" />
+          <ScalarProperty Name="DeliveryProductID_6qty" ColumnName="DeliveryProductID_6qty" />
+          <ScalarProperty Name="DeliveryProductID_5qty" ColumnName="DeliveryProductID_5qty" />
+          <ScalarProperty Name="DeliveryProductID_4qty" ColumnName="DeliveryProductID_4qty" />
+          <ScalarProperty Name="DeliveryProductID_3qty" ColumnName="DeliveryProductID_3qty" />
+          <ScalarProperty Name="DeliveryProductID_2qty" ColumnName="DeliveryProductID_2qty" />
+          <ScalarProperty Name="DeliveryProductID_1qty" ColumnName="DeliveryProductID_1qty" />
+          <ScalarProperty Name="DeliveryProductID_10" ColumnName="DeliveryProductID_10" />
+          <ScalarProperty Name="DeliveryProductID_9" ColumnName="DeliveryProductID_9" />
+          <ScalarProperty Name="DeliveryProductID_8" ColumnName="DeliveryProductID_8" />
+          <ScalarProperty Name="DeliveryProductID_7" ColumnName="DeliveryProductID_7" />
+          <ScalarProperty Name="DeliveryProductID_6" ColumnName="DeliveryProductID_6" />
+          <ScalarProperty Name="DeliveryProductID_5" ColumnName="DeliveryProductID_5" />
+          <ScalarProperty Name="DeliveryProductID_4" ColumnName="DeliveryProductID_4" />
+          <ScalarProperty Name="DeliveryProductID_3" ColumnName="DeliveryProductID_3" />
+          <ScalarProperty Name="DeliveryProductID_2" ColumnName="DeliveryProductID_2" />
+          <ScalarProperty Name="DeliveryProductID_1" ColumnName="DeliveryProductID_1" />
+          <ScalarProperty Name="D_Status" ColumnName="D_Status" />
+          <ScalarProperty Name="CustomerID" ColumnName="CustomerID" />
+          <ScalarProperty Name="SessionID" ColumnName="SessionID" />
+          <ScalarProperty Name="timeofDelivery" ColumnName="timeofDelivery" />
+          <ScalarProperty Name="DeliveryDate" ColumnName="DeliveryDate" />
+          <ScalarProperty Name="DWorkerID" ColumnName="DWorkerID" />
+          <ScalarProperty Name="OrderID" ColumnName="OrderID" />
+          <ScalarProperty Name="DeliveryOrderID" ColumnName="DeliveryOrderID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="departments">
+      <EntityTypeMapping TypeName="betterlimitedModel.department">
+        <MappingFragment StoreEntitySet="department">
+          <ScalarProperty Name="DepartmentName" ColumnName="DepartmentName" />
+          <ScalarProperty Name="DepartmentID" ColumnName="DepartmentID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="installationorders">
+      <EntityTypeMapping TypeName="betterlimitedModel.installationorder">
+        <MappingFragment StoreEntitySet="installationorder">
+          <ScalarProperty Name="InstallationStaffID" ColumnName="InstallationStaffID" />
+          <ScalarProperty Name="InstallProduct10_qty" ColumnName="InstallProduct10_qty" />
+          <ScalarProperty Name="InstallProduct9_qty" ColumnName="InstallProduct9_qty" />
+          <ScalarProperty Name="InstallProduct8_qty" ColumnName="InstallProduct8_qty" />
+          <ScalarProperty Name="InstallProduct7_qty" ColumnName="InstallProduct7_qty" />
+          <ScalarProperty Name="InstallProduct6_qty" ColumnName="InstallProduct6_qty" />
+          <ScalarProperty Name="InstallProduct5_qty" ColumnName="InstallProduct5_qty" />
+          <ScalarProperty Name="InstallProduct4_qty" ColumnName="InstallProduct4_qty" />
+          <ScalarProperty Name="InstallProduct3_qty" ColumnName="InstallProduct3_qty" />
+          <ScalarProperty Name="InstallProduct2_qty" ColumnName="InstallProduct2_qty" />
+          <ScalarProperty Name="InstallProduct1_qty" ColumnName="InstallProduct1_qty" />
+          <ScalarProperty Name="InstallProduct10" ColumnName="InstallProduct10" />
+          <ScalarProperty Name="InstallProduct9" ColumnName="InstallProduct9" />
+          <ScalarProperty Name="InstallProduct8" ColumnName="InstallProduct8" />
+          <ScalarProperty Name="InstallProduct7" ColumnName="InstallProduct7" />
+          <ScalarProperty Name="InstallProduct6" ColumnName="InstallProduct6" />
+          <ScalarProperty Name="InstallProduct5" ColumnName="InstallProduct5" />
+          <ScalarProperty Name="InstallProduct4" ColumnName="InstallProduct4" />
+          <ScalarProperty Name="InstallProduct3" ColumnName="InstallProduct3" />
+          <ScalarProperty Name="InstallProduct2" ColumnName="InstallProduct2" />
+          <ScalarProperty Name="InstallProduct1" ColumnName="InstallProduct1" />
+          <ScalarProperty Name="InstallationDate" ColumnName="InstallationDate" />
+          <ScalarProperty Name="InstallationTime" ColumnName="InstallationTime" />
+          <ScalarProperty Name="I_status" ColumnName="I_status" />
+          <ScalarProperty Name="SessionID" ColumnName="SessionID" />
+          <ScalarProperty Name="I_Worker" ColumnName="I_Worker" />
+          <ScalarProperty Name="SaleOrderID" ColumnName="SaleOrderID" />
+          <ScalarProperty Name="InstallationOrderID" ColumnName="InstallationOrderID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="products">
+      <EntityTypeMapping TypeName="betterlimitedModel.product">
+        <MappingFragment StoreEntitySet="product">
+          <ScalarProperty Name="TWdisplay" ColumnName="TWdisplay" />
+          <ScalarProperty Name="TWStore" ColumnName="TWStore" />
+          <ScalarProperty Name="KBdisplay" ColumnName="KBdisplay" />
+          <ScalarProperty Name="KBStore" ColumnName="KBStore" />
+          <ScalarProperty Name="Low_Standard" ColumnName="Low_Standard" />
+          <ScalarProperty Name="StockLevel" ColumnName="StockLevel" />
+          <ScalarProperty Name="SupplierID" ColumnName="SupplierID" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="TypeID" ColumnName="TypeID" />
+          <ScalarProperty Name="Available" ColumnName="Available" />
+          <ScalarProperty Name="ProductName" ColumnName="ProductName" />
+          <ScalarProperty Name="SerialNum" ColumnName="SerialNum" />
+          <ScalarProperty Name="RequireInstall" ColumnName="RequireInstall" />
+          <ScalarProperty Name="Reorder" ColumnName="Reorder" />
+          <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="purchaseitems">
+      <EntityTypeMapping TypeName="betterlimitedModel.purchaseitem">
+        <MappingFragment StoreEntitySet="purchaseitem">
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="Quanity" ColumnName="Quanity" />
+          <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+          <ScalarProperty Name="PurchaseOrderID" ColumnName="PurchaseOrderID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="purchasingorders">
+      <EntityTypeMapping TypeName="betterlimitedModel.purchasingorder">
+        <MappingFragment StoreEntitySet="purchasingorder">
+          <ScalarProperty Name="StaffID" ColumnName="StaffID" />
+          <ScalarProperty Name="PurchaseOrderCreateDate" ColumnName="PurchaseOrderCreateDate" />
+          <ScalarProperty Name="purchasingorderID" ColumnName="purchasingorderID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="reorders">
+      <EntityTypeMapping TypeName="betterlimitedModel.reorder">
+        <MappingFragment StoreEntitySet="reorder">
+          <ScalarProperty Name="Product10" ColumnName="Product10" />
+          <ScalarProperty Name="Product9" ColumnName="Product9" />
+          <ScalarProperty Name="Product8" ColumnName="Product8" />
+          <ScalarProperty Name="Product7" ColumnName="Product7" />
+          <ScalarProperty Name="Product6" ColumnName="Product6" />
+          <ScalarProperty Name="Product5" ColumnName="Product5" />
+          <ScalarProperty Name="Product4" ColumnName="Product4" />
+          <ScalarProperty Name="Product3" ColumnName="Product3" />
+          <ScalarProperty Name="Product2" ColumnName="Product2" />
+          <ScalarProperty Name="Product1" ColumnName="Product1" />
+          <ScalarProperty Name="Approve" ColumnName="Approve" />
+          <ScalarProperty Name="ReorderCreatedDate" ColumnName="ReorderCreatedDate" />
+          <ScalarProperty Name="ReorderID" ColumnName="ReorderID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="saleorders">
+      <EntityTypeMapping TypeName="betterlimitedModel.saleorder">
+        <MappingFragment StoreEntitySet="saleorder">
+          <ScalarProperty Name="Product10_display" ColumnName="Product10_display" />
+          <ScalarProperty Name="Product9_display" ColumnName="Product9_display" />
+          <ScalarProperty Name="Product8_display" ColumnName="Product8_display" />
+          <ScalarProperty Name="Product7_display" ColumnName="Product7_display" />
+          <ScalarProperty Name="Product6_display" ColumnName="Product6_display" />
+          <ScalarProperty Name="Product5_display" ColumnName="Product5_display" />
+          <ScalarProperty Name="Product4_display" ColumnName="Product4_display" />
+          <ScalarProperty Name="Product3_display" ColumnName="Product3_display" />
+          <ScalarProperty Name="Product2_display" ColumnName="Product2_display" />
+          <ScalarProperty Name="Product1_display" ColumnName="Product1_display" />
+          <ScalarProperty Name="Product10_Qty" ColumnName="Product10_Qty" />
+          <ScalarProperty Name="Product10_ID" ColumnName="Product10_ID" />
+          <ScalarProperty Name="Product9_Qty" ColumnName="Product9_Qty" />
+          <ScalarProperty Name="Product9_ID" ColumnName="Product9_ID" />
+          <ScalarProperty Name="Product8_Qty" ColumnName="Product8_Qty" />
+          <ScalarProperty Name="Product8_ID" ColumnName="Product8_ID" />
+          <ScalarProperty Name="Product7_Qty" ColumnName="Product7_Qty" />
+          <ScalarProperty Name="Product7_ID" ColumnName="Product7_ID" />
+          <ScalarProperty Name="Product6_Qty" ColumnName="Product6_Qty" />
+          <ScalarProperty Name="Product6_ID" ColumnName="Product6_ID" />
+          <ScalarProperty Name="Product5_Qty" ColumnName="Product5_Qty" />
+          <ScalarProperty Name="Product5_ID" ColumnName="Product5_ID" />
+          <ScalarProperty Name="Product4_Qty" ColumnName="Product4_Qty" />
+          <ScalarProperty Name="Product4_ID" ColumnName="Product4_ID" />
+          <ScalarProperty Name="Product3_Qty" ColumnName="Product3_Qty" />
+          <ScalarProperty Name="Product3_ID" ColumnName="Product3_ID" />
+          <ScalarProperty Name="Product2_Qty" ColumnName="Product2_Qty" />
+          <ScalarProperty Name="Product2_ID" ColumnName="Product2_ID" />
+          <ScalarProperty Name="Product1_Qty" ColumnName="Product1_Qty" />
+          <ScalarProperty Name="Product1_ID" ColumnName="Product1_ID" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+          <ScalarProperty Name="PayMethod" ColumnName="PayMethod" />
+          <ScalarProperty Name="PayAmount" ColumnName="PayAmount" />
+          <ScalarProperty Name="DepositCharge" ColumnName="DepositCharge" />
+          <ScalarProperty Name="Addition_Charge" ColumnName="Addition_Charge" />
+          <ScalarProperty Name="TotalCharge" ColumnName="TotalCharge" />
+          <ScalarProperty Name="CustomerID" ColumnName="CustomerID" />
+          <ScalarProperty Name="staffID" ColumnName="staffID" />
+          <ScalarProperty Name="storeID" ColumnName="storeID" />
+          <ScalarProperty Name="InstallationOrderID" ColumnName="InstallationOrderID" />
+          <ScalarProperty Name="DeliveryOrderID" ColumnName="DeliveryOrderID" />
+          <ScalarProperty Name="orderType" ColumnName="orderType" />
+          <ScalarProperty Name="Date_Of_Purchase" ColumnName="Date_Of_Purchase" />
+          <ScalarProperty Name="orderID" ColumnName="orderID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="schedules">
+      <EntityTypeMapping TypeName="betterlimitedModel.schedule">
+        <MappingFragment StoreEntitySet="schedule">
+          <ScalarProperty Name="I_staffID2" ColumnName="I_staffID2" />
+          <ScalarProperty Name="I_staffID" ColumnName="I_staffID" />
+          <ScalarProperty Name="D_staff2ID" ColumnName="D_staff2ID" />
+          <ScalarProperty Name="D_staffID" ColumnName="D_staffID" />
+          <ScalarProperty Name="SessionID" ColumnName="SessionID" />
+          <ScalarProperty Name="dateofservice" ColumnName="dateofservice" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sessions">
+      <EntityTypeMapping TypeName="betterlimitedModel.session">
+        <MappingFragment StoreEntitySet="session">
+          <ScalarProperty Name="SessionTime" ColumnName="SessionTime" />
+          <ScalarProperty Name="Session1" ColumnName="Session" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="shoprecoveries">
+      <EntityTypeMapping TypeName="betterlimitedModel.shoprecovery">
+        <MappingFragment StoreEntitySet="shoprecovery">
+          <ScalarProperty Name="Reason" ColumnName="Reason" />
+          <ScalarProperty Name="dateofrecover" ColumnName="dateofrecover" />
+          <ScalarProperty Name="StoreID" ColumnName="StoreID" />
+          <ScalarProperty Name="dateofcreate" ColumnName="dateofcreate" />
+          <ScalarProperty Name="status" ColumnName="status" />
+          <ScalarProperty Name="Quanity" ColumnName="Quanity" />
+          <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+          <ScalarProperty Name="recoveryid" ColumnName="recoveryid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="soldproducts">
+      <EntityTypeMapping TypeName="betterlimitedModel.soldproduct">
+        <MappingFragment StoreEntitySet="soldproduct">
+          <ScalarProperty Name="Able" ColumnName="Able" />
+          <ScalarProperty Name="TotalAmount" ColumnName="TotalAmount" />
+          <ScalarProperty Name="Displayed" ColumnName="Displayed" />
+          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+          <ScalarProperty Name="ProductPrePrice" ColumnName="ProductPrePrice" />
+          <ScalarProperty Name="productID" ColumnName="productID" />
+          <ScalarProperty Name="SaleorderID" ColumnName="SaleorderID" />
+          <ScalarProperty Name="soldproductid" ColumnName="soldproductid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="staffs">
+      <EntityTypeMapping TypeName="betterlimitedModel.staff">
+        <MappingFragment StoreEntitySet="staff">
+          <ScalarProperty Name="BrithDate" ColumnName="BrithDate" />
+          <ScalarProperty Name="StoreID" ColumnName="StoreID" />
+          <ScalarProperty Name="DepartmentID" ColumnName="DepartmentID" />
+          <ScalarProperty Name="Gender" ColumnName="Gender" />
+          <ScalarProperty Name="AddressLine3" ColumnName="AddressLine3" />
+          <ScalarProperty Name="AddressLine2" ColumnName="AddressLine2" />
+          <ScalarProperty Name="AddressLine1" ColumnName="AddressLine1" />
+          <ScalarProperty Name="Region" ColumnName="Region" />
+          <ScalarProperty Name="EmailAddress" ColumnName="EmailAddress" />
+          <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Lastname" ColumnName="Lastname" />
+          <ScalarProperty Name="Firstname" ColumnName="Firstname" />
+          <ScalarProperty Name="Username" ColumnName="Username" />
+          <ScalarProperty Name="HKID" ColumnName="HKID" />
+          <ScalarProperty Name="StaffID" ColumnName="StaffID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="stores">
+      <EntityTypeMapping TypeName="betterlimitedModel.store">
+        <MappingFragment StoreEntitySet="store">
+          <ScalarProperty Name="Available" ColumnName="Available" />
+          <ScalarProperty Name="Region" ColumnName="Region" />
+          <ScalarProperty Name="Address3" ColumnName="Address3" />
+          <ScalarProperty Name="Address2" ColumnName="Address2" />
+          <ScalarProperty Name="Address1" ColumnName="Address1" />
+          <ScalarProperty Name="Phonenumber" ColumnName="Phonenumber" />
+          <ScalarProperty Name="StoreManager" ColumnName="StoreManager" />
+          <ScalarProperty Name="StoreName" ColumnName="StoreName" />
+          <ScalarProperty Name="StoreID" ColumnName="StoreID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="suppliers">
+      <EntityTypeMapping TypeName="betterlimitedModel.supplier">
+        <MappingFragment StoreEntitySet="supplier">
+          <ScalarProperty Name="Region" ColumnName="Region" />
+          <ScalarProperty Name="Available" ColumnName="Available" />
+          <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
+          <ScalarProperty Name="Address3" ColumnName="Address3" />
+          <ScalarProperty Name="Address2" ColumnName="Address2" />
+          <ScalarProperty Name="Address1" ColumnName="Address1" />
+          <ScalarProperty Name="SupplierName" ColumnName="SupplierName" />
+          <ScalarProperty Name="SupplierID" ColumnName="SupplierID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="types">
+      <EntityTypeMapping TypeName="betterlimitedModel.type">
+        <MappingFragment StoreEntitySet="type">
+          <ScalarProperty Name="TypeName" ColumnName="TypeName" />
+          <ScalarProperty Name="TypeID" ColumnName="TypeID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

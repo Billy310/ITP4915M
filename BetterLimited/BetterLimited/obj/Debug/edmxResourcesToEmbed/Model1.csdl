@@ -1,0 +1,1174 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="betterlimitedModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="betterlimitedEntities_Test1" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="customers" EntityType="betterlimitedModel.customer" />
+    <EntitySet Name="defectitems" EntityType="betterlimitedModel.defectitem" />
+    <EntitySet Name="deliveryorders" EntityType="betterlimitedModel.deliveryorder" />
+    <EntitySet Name="departments" EntityType="betterlimitedModel.department" />
+    <EntitySet Name="installationorders" EntityType="betterlimitedModel.installationorder" />
+    <EntitySet Name="products" EntityType="betterlimitedModel.product" />
+    <EntitySet Name="purchaseitems" EntityType="betterlimitedModel.purchaseitem" />
+    <EntitySet Name="purchasingorders" EntityType="betterlimitedModel.purchasingorder" />
+    <EntitySet Name="reorders" EntityType="betterlimitedModel.reorder" />
+    <EntitySet Name="saleorders" EntityType="betterlimitedModel.saleorder" />
+    <EntitySet Name="schedules" EntityType="betterlimitedModel.schedule" />
+    <EntitySet Name="sessions" EntityType="betterlimitedModel.session" />
+    <EntitySet Name="shoprecoveries" EntityType="betterlimitedModel.shoprecovery" />
+    <EntitySet Name="soldproducts" EntityType="betterlimitedModel.soldproduct" />
+    <EntitySet Name="staffs" EntityType="betterlimitedModel.staff" />
+    <EntitySet Name="stores" EntityType="betterlimitedModel.store" />
+    <EntitySet Name="suppliers" EntityType="betterlimitedModel.supplier" />
+    <EntitySet Name="types" EntityType="betterlimitedModel.type" />
+    <AssociationSet Name="ForeignKey_DCustomerID" Association="betterlimitedModel.ForeignKey_DCustomerID">
+      <End Role="customer" EntitySet="customers" />
+      <End Role="deliveryorder" EntitySet="deliveryorders" />
+    </AssociationSet>
+    <AssociationSet Name="ForeignKey_DProductID10" Association="betterlimitedModel.ForeignKey_DProductID10">
+      <End Role="product" EntitySet="products" />
+      <End Role="deliveryorder" EntitySet="deliveryorders" />
+    </AssociationSet>
+    <AssociationSet Name="ForeignKey_DProductID2" Association="betterlimitedModel.ForeignKey_DProductID2">
+      <End Role="product" EntitySet="products" />
+      <End Role="deliveryorder" EntitySet="deliveryorders" />
+    </AssociationSet>
+    <AssociationSet Name="ForeignKey_DProductID3" Association="betterlimitedModel.ForeignKey_DProductID3">
+      <End Role="product" EntitySet="products" />
+      <End Role="deliveryorder" EntitySet="deliveryorders" />
+    </AssociationSet>
+    <AssociationSet Name="ForeignKey_DProductID4" Association="betterlimitedModel.ForeignKey_DProductID4">
+      <End Role="product" EntitySet="products" />
+      <End Role="deliveryorder" EntitySet="deliveryorders" />
+    </AssociationSet>
+    <AssociationSet Name="ForeignKey_DProductID5" Association="betterlimitedModel.ForeignKey_DProductID5">
+      <End Role="product" EntitySet="products" />
+      <End Role="deliveryorder" EntitySet="deliveryorders" />
+    </AssociationSet>
+    <AssociationSet Name="ForeignKey_DProductID6" Association="betterlimitedModel.ForeignKey_DProductID6">
+      <End Role="product" EntitySet="products" />
+      <End Role="deliveryorder" EntitySet="deliveryorders" />
+    </AssociationSet>
+    <AssociationSet Name="ForeignKey_DProductID7" Association="betterlimitedModel.ForeignKey_DProductID7">
+      <End Role="product" EntitySet="products" />
+      <End Role="deliveryorder" EntitySet="deliveryorders" />
+    </AssociationSet>
+    <AssociationSet Name="ForeignKey_DProductID8" Association="betterlimitedModel.ForeignKey_DProductID8">
+      <End Role="product" EntitySet="products" />
+      <End Role="deliveryorder" EntitySet="deliveryorders" />
+    </AssociationSet>
+    <AssociationSet Name="ForeignKey_DProductID9" Association="betterlimitedModel.ForeignKey_DProductID9">
+      <End Role="product" EntitySet="products" />
+      <End Role="deliveryorder" EntitySet="deliveryorders" />
+    </AssociationSet>
+    <AssociationSet Name="ForeignKey_SessionID" Association="betterlimitedModel.ForeignKey_SessionID">
+      <End Role="session" EntitySet="sessions" />
+      <End Role="deliveryorder" EntitySet="deliveryorders" />
+    </AssociationSet>
+    <AssociationSet Name="ForeignKey_DepartmentID" Association="betterlimitedModel.ForeignKey_DepartmentID">
+      <End Role="department" EntitySet="departments" />
+      <End Role="staff" EntitySet="staffs" />
+    </AssociationSet>
+    <AssociationSet Name="ForeignKey_iProductID1" Association="betterlimitedModel.ForeignKey_iProductID1">
+      <End Role="product" EntitySet="products" />
+      <End Role="installationorder" EntitySet="installationorders" />
+    </AssociationSet>
+    <AssociationSet Name="ForeignKey_iProductID10" Association="betterlimitedModel.ForeignKey_iProductID10">
+      <End Role="product" EntitySet="products" />
+      <End Role="installationorder" EntitySet="installationorders" />
+    </AssociationSet>
+    <AssociationSet Name="ForeignKey_iProductID2" Association="betterlimitedModel.ForeignKey_iProductID2">
+      <End Role="product" EntitySet="products" />
+      <End Role="installationorder" EntitySet="installationorders" />
+    </AssociationSet>
+    <AssociationSet Name="ForeignKey_iProductID3" Association="betterlimitedModel.ForeignKey_iProductID3">
+      <End Role="product" EntitySet="products" />
+      <End Role="installationorder" EntitySet="installationorders" />
+    </AssociationSet>
+    <AssociationSet Name="ForeignKey_iProductID4" Association="betterlimitedModel.ForeignKey_iProductID4">
+      <End Role="product" EntitySet="products" />
+      <End Role="installationorder" EntitySet="installationorders" />
+    </AssociationSet>
+    <AssociationSet Name="ForeignKey_iProductID5" Association="betterlimitedModel.ForeignKey_iProductID5">
+      <End Role="product" EntitySet="products" />
+      <End Role="installationorder" EntitySet="installationorders" />
+    </AssociationSet>
+    <AssociationSet Name="ForeignKey_iProductID6" Association="betterlimitedModel.ForeignKey_iProductID6">
+      <End Role="product" EntitySet="products" />
+      <End Role="installationorder" EntitySet="installationorders" />
+    </AssociationSet>
+    <AssociationSet Name="ForeignKey_iProductID7" Association="betterlimitedModel.ForeignKey_iProductID7">
+      <End Role="product" EntitySet="products" />
+      <End Role="installationorder" EntitySet="installationorders" />
+    </AssociationSet>
+    <AssociationSet Name="ForeignKey_iProductID8" Association="betterlimitedModel.ForeignKey_iProductID8">
+      <End Role="product" EntitySet="products" />
+      <End Role="installationorder" EntitySet="installationorders" />
+    </AssociationSet>
+    <AssociationSet Name="ForeignKey_iProductID9" Association="betterlimitedModel.ForeignKey_iProductID9">
+      <End Role="product" EntitySet="products" />
+      <End Role="installationorder" EntitySet="installationorders" />
+    </AssociationSet>
+    <AssociationSet Name="ForeignKey_ProductID" Association="betterlimitedModel.ForeignKey_ProductID">
+      <End Role="product" EntitySet="products" />
+      <End Role="purchaseitem" EntitySet="purchaseitems" />
+    </AssociationSet>
+    <AssociationSet Name="ForeignKey_ProductID1" Association="betterlimitedModel.ForeignKey_ProductID1">
+      <End Role="product" EntitySet="products" />
+      <End Role="reorder" EntitySet="reorders" />
+    </AssociationSet>
+    <AssociationSet Name="ForeignKey_ProductID10" Association="betterlimitedModel.ForeignKey_ProductID10">
+      <End Role="product" EntitySet="products" />
+      <End Role="reorder" EntitySet="reorders" />
+    </AssociationSet>
+    <AssociationSet Name="ForeignKey_ProductID2" Association="betterlimitedModel.ForeignKey_ProductID2">
+      <End Role="product" EntitySet="products" />
+      <End Role="reorder" EntitySet="reorders" />
+    </AssociationSet>
+    <AssociationSet Name="ForeignKey_ProductID3" Association="betterlimitedModel.ForeignKey_ProductID3">
+      <End Role="product" EntitySet="products" />
+      <End Role="reorder" EntitySet="reorders" />
+    </AssociationSet>
+    <AssociationSet Name="ForeignKey_ProductID4" Association="betterlimitedModel.ForeignKey_ProductID4">
+      <End Role="product" EntitySet="products" />
+      <End Role="reorder" EntitySet="reorders" />
+    </AssociationSet>
+    <AssociationSet Name="ForeignKey_ProductID5" Association="betterlimitedModel.ForeignKey_ProductID5">
+      <End Role="product" EntitySet="products" />
+      <End Role="reorder" EntitySet="reorders" />
+    </AssociationSet>
+    <AssociationSet Name="ForeignKey_ProductID6" Association="betterlimitedModel.ForeignKey_ProductID6">
+      <End Role="product" EntitySet="products" />
+      <End Role="reorder" EntitySet="reorders" />
+    </AssociationSet>
+    <AssociationSet Name="ForeignKey_ProductID7" Association="betterlimitedModel.ForeignKey_ProductID7">
+      <End Role="product" EntitySet="products" />
+      <End Role="reorder" EntitySet="reorders" />
+    </AssociationSet>
+    <AssociationSet Name="ForeignKey_ProductID8" Association="betterlimitedModel.ForeignKey_ProductID8">
+      <End Role="product" EntitySet="products" />
+      <End Role="reorder" EntitySet="reorders" />
+    </AssociationSet>
+    <AssociationSet Name="ForeignKey_ProductID9" Association="betterlimitedModel.ForeignKey_ProductID9">
+      <End Role="product" EntitySet="products" />
+      <End Role="reorder" EntitySet="reorders" />
+    </AssociationSet>
+    <AssociationSet Name="ForeignKey_SupplierID" Association="betterlimitedModel.ForeignKey_SupplierID">
+      <End Role="supplier" EntitySet="suppliers" />
+      <End Role="product" EntitySet="products" />
+    </AssociationSet>
+    <AssociationSet Name="ForeignKey_TypeID" Association="betterlimitedModel.ForeignKey_TypeID">
+      <End Role="type" EntitySet="types" />
+      <End Role="product" EntitySet="products" />
+    </AssociationSet>
+    <AssociationSet Name="ForeignKey_PurchaseOrderID" Association="betterlimitedModel.ForeignKey_PurchaseOrderID">
+      <End Role="purchasingorder" EntitySet="purchasingorders" />
+      <End Role="purchaseitem" EntitySet="purchaseitems" />
+    </AssociationSet>
+    <AssociationSet Name="ForeignKey_StaffID" Association="betterlimitedModel.ForeignKey_StaffID">
+      <End Role="staff" EntitySet="staffs" />
+      <End Role="purchasingorder" EntitySet="purchasingorders" />
+    </AssociationSet>
+    <AssociationSet Name="ForeignKey_Session" Association="betterlimitedModel.ForeignKey_Session">
+      <End Role="session" EntitySet="sessions" />
+      <End Role="schedule" EntitySet="schedules" />
+    </AssociationSet>
+    <AssociationSet Name="ForeignKey_StaffID_D" Association="betterlimitedModel.ForeignKey_StaffID_D">
+      <End Role="staff" EntitySet="staffs" />
+      <End Role="schedule" EntitySet="schedules" />
+    </AssociationSet>
+    <AssociationSet Name="ForeignKey_StaffID_D1" Association="betterlimitedModel.ForeignKey_StaffID_D1">
+      <End Role="staff" EntitySet="staffs" />
+      <End Role="schedule" EntitySet="schedules" />
+    </AssociationSet>
+    <AssociationSet Name="ForeignKey_StaffID_I1" Association="betterlimitedModel.ForeignKey_StaffID_I1">
+      <End Role="staff" EntitySet="staffs" />
+      <End Role="schedule" EntitySet="schedules" />
+    </AssociationSet>
+    <AssociationSet Name="ForeignKey_StaffID_I2" Association="betterlimitedModel.ForeignKey_StaffID_I2">
+      <End Role="staff" EntitySet="staffs" />
+      <End Role="schedule" EntitySet="schedules" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="customer">
+    <Key>
+      <PropertyRef Name="CustomerID" />
+    </Key>
+    <Property Name="CustomerID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FirstName" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="LastName" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="CompanyName" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="ContactPersion" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Phone1" Type="String" Nullable="false" MaxLength="13" FixedLength="false" Unicode="false" />
+    <Property Name="Phone2" Type="String" MaxLength="13" FixedLength="false" Unicode="false" />
+    <Property Name="AddressLine1" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="AddressLine2" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="AddressLine3" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Region" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="Districts" Type="Int32" />
+    <Property Name="EmailAddress" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="deliveryorders" Relationship="betterlimitedModel.ForeignKey_DCustomerID" FromRole="customer" ToRole="deliveryorder" />
+  </EntityType>
+  <EntityType Name="defectitem">
+    <Key>
+      <PropertyRef Name="defectItemID" />
+    </Key>
+    <Property Name="defectItemID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="SaleOrderID" Type="Int32" />
+    <Property Name="ProductID" Type="Int32" />
+    <Property Name="Quantity" Type="Int32" />
+    <Property Name="Reason" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="HandleMethod" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="RefundAmount" Type="Double" />
+    <Property Name="SupplierReply" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Handle" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+    <Property Name="dateofreturn" Type="DateTime" />
+  </EntityType>
+  <EntityType Name="deliveryorder">
+    <Key>
+      <PropertyRef Name="DeliveryOrderID" />
+    </Key>
+    <Property Name="DeliveryOrderID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="OrderID" Type="Int32" />
+    <Property Name="DWorkerID" Type="Int32" />
+    <Property Name="DeliveryDate" Type="DateTime" />
+    <Property Name="timeofDelivery" Type="Time" />
+    <Property Name="SessionID" Type="Int32" />
+    <Property Name="CustomerID" Type="Int32" />
+    <Property Name="D_Status" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="DeliveryProductID_1" Type="Int32" Nullable="false" />
+    <Property Name="DeliveryProductID_2" Type="Int32" />
+    <Property Name="DeliveryProductID_3" Type="Int32" />
+    <Property Name="DeliveryProductID_4" Type="Int32" />
+    <Property Name="DeliveryProductID_5" Type="Int32" />
+    <Property Name="DeliveryProductID_6" Type="Int32" />
+    <Property Name="DeliveryProductID_7" Type="Int32" />
+    <Property Name="DeliveryProductID_8" Type="Int32" />
+    <Property Name="DeliveryProductID_9" Type="Int32" />
+    <Property Name="DeliveryProductID_10" Type="Int32" />
+    <Property Name="DeliveryProductID_1qty" Type="Int32" Nullable="false" />
+    <Property Name="DeliveryProductID_2qty" Type="Int32" Nullable="false" />
+    <Property Name="DeliveryProductID_3qty" Type="Int32" Nullable="false" />
+    <Property Name="DeliveryProductID_4qty" Type="Int32" Nullable="false" />
+    <Property Name="DeliveryProductID_5qty" Type="Int32" Nullable="false" />
+    <Property Name="DeliveryProductID_6qty" Type="Int32" Nullable="false" />
+    <Property Name="DeliveryProductID_7qty" Type="Int32" Nullable="false" />
+    <Property Name="DeliveryProductID_8qty" Type="Int32" Nullable="false" />
+    <Property Name="DeliveryProductID_9qty" Type="Int32" Nullable="false" />
+    <Property Name="DeliveryProductID_10qty" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="customer" Relationship="betterlimitedModel.ForeignKey_DCustomerID" FromRole="deliveryorder" ToRole="customer" />
+    <NavigationProperty Name="product" Relationship="betterlimitedModel.ForeignKey_DProductID10" FromRole="deliveryorder" ToRole="product" />
+    <NavigationProperty Name="product1" Relationship="betterlimitedModel.ForeignKey_DProductID2" FromRole="deliveryorder" ToRole="product" />
+    <NavigationProperty Name="product2" Relationship="betterlimitedModel.ForeignKey_DProductID3" FromRole="deliveryorder" ToRole="product" />
+    <NavigationProperty Name="product3" Relationship="betterlimitedModel.ForeignKey_DProductID4" FromRole="deliveryorder" ToRole="product" />
+    <NavigationProperty Name="product4" Relationship="betterlimitedModel.ForeignKey_DProductID5" FromRole="deliveryorder" ToRole="product" />
+    <NavigationProperty Name="product5" Relationship="betterlimitedModel.ForeignKey_DProductID6" FromRole="deliveryorder" ToRole="product" />
+    <NavigationProperty Name="product6" Relationship="betterlimitedModel.ForeignKey_DProductID7" FromRole="deliveryorder" ToRole="product" />
+    <NavigationProperty Name="product7" Relationship="betterlimitedModel.ForeignKey_DProductID8" FromRole="deliveryorder" ToRole="product" />
+    <NavigationProperty Name="product8" Relationship="betterlimitedModel.ForeignKey_DProductID9" FromRole="deliveryorder" ToRole="product" />
+    <NavigationProperty Name="session" Relationship="betterlimitedModel.ForeignKey_SessionID" FromRole="deliveryorder" ToRole="session" />
+  </EntityType>
+  <EntityType Name="department">
+    <Key>
+      <PropertyRef Name="DepartmentID" />
+    </Key>
+    <Property Name="DepartmentID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="DepartmentName" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="staffs" Relationship="betterlimitedModel.ForeignKey_DepartmentID" FromRole="department" ToRole="staff" />
+  </EntityType>
+  <EntityType Name="installationorder">
+    <Key>
+      <PropertyRef Name="InstallationOrderID" />
+    </Key>
+    <Property Name="InstallationOrderID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="SaleOrderID" Type="Int32" />
+    <Property Name="I_Worker" Type="Int32" />
+    <Property Name="SessionID" Type="Int32" />
+    <Property Name="I_status" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="InstallationTime" Type="Time" Nullable="false" />
+    <Property Name="InstallationDate" Type="DateTime" />
+    <Property Name="InstallProduct1" Type="Int32" Nullable="false" />
+    <Property Name="InstallProduct2" Type="Int32" Nullable="false" />
+    <Property Name="InstallProduct3" Type="Int32" Nullable="false" />
+    <Property Name="InstallProduct4" Type="Int32" Nullable="false" />
+    <Property Name="InstallProduct5" Type="Int32" Nullable="false" />
+    <Property Name="InstallProduct6" Type="Int32" Nullable="false" />
+    <Property Name="InstallProduct7" Type="Int32" Nullable="false" />
+    <Property Name="InstallProduct8" Type="Int32" Nullable="false" />
+    <Property Name="InstallProduct9" Type="Int32" Nullable="false" />
+    <Property Name="InstallProduct10" Type="Int32" Nullable="false" />
+    <Property Name="InstallProduct1_qty" Type="Int32" Nullable="false" />
+    <Property Name="InstallProduct2_qty" Type="Int32" Nullable="false" />
+    <Property Name="InstallProduct3_qty" Type="Int32" Nullable="false" />
+    <Property Name="InstallProduct4_qty" Type="Int32" Nullable="false" />
+    <Property Name="InstallProduct5_qty" Type="Int32" Nullable="false" />
+    <Property Name="InstallProduct6_qty" Type="Int32" Nullable="false" />
+    <Property Name="InstallProduct7_qty" Type="Int32" Nullable="false" />
+    <Property Name="InstallProduct8_qty" Type="Int32" Nullable="false" />
+    <Property Name="InstallProduct9_qty" Type="Int32" Nullable="false" />
+    <Property Name="InstallProduct10_qty" Type="Int32" Nullable="false" />
+    <Property Name="InstallationStaffID" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="product" Relationship="betterlimitedModel.ForeignKey_iProductID1" FromRole="installationorder" ToRole="product" />
+    <NavigationProperty Name="product1" Relationship="betterlimitedModel.ForeignKey_iProductID10" FromRole="installationorder" ToRole="product" />
+    <NavigationProperty Name="product2" Relationship="betterlimitedModel.ForeignKey_iProductID2" FromRole="installationorder" ToRole="product" />
+    <NavigationProperty Name="product3" Relationship="betterlimitedModel.ForeignKey_iProductID3" FromRole="installationorder" ToRole="product" />
+    <NavigationProperty Name="product4" Relationship="betterlimitedModel.ForeignKey_iProductID4" FromRole="installationorder" ToRole="product" />
+    <NavigationProperty Name="product5" Relationship="betterlimitedModel.ForeignKey_iProductID5" FromRole="installationorder" ToRole="product" />
+    <NavigationProperty Name="product6" Relationship="betterlimitedModel.ForeignKey_iProductID6" FromRole="installationorder" ToRole="product" />
+    <NavigationProperty Name="product7" Relationship="betterlimitedModel.ForeignKey_iProductID7" FromRole="installationorder" ToRole="product" />
+    <NavigationProperty Name="product8" Relationship="betterlimitedModel.ForeignKey_iProductID8" FromRole="installationorder" ToRole="product" />
+    <NavigationProperty Name="product9" Relationship="betterlimitedModel.ForeignKey_iProductID9" FromRole="installationorder" ToRole="product" />
+  </EntityType>
+  <EntityType Name="product">
+    <Key>
+      <PropertyRef Name="ProductID" />
+    </Key>
+    <Property Name="ProductID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Reorder" Type="Int32" Nullable="false" />
+    <Property Name="RequireInstall" Type="Int32" />
+    <Property Name="SerialNum" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="ProductName" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="Available" Type="Int32" Nullable="false" />
+    <Property Name="TypeID" Type="Int32" Nullable="false" />
+    <Property Name="Price" Type="Int32" Nullable="false" />
+    <Property Name="SupplierID" Type="Int32" Nullable="false" />
+    <Property Name="StockLevel" Type="Int32" />
+    <Property Name="Low_Standard" Type="Int32" Nullable="false" />
+    <Property Name="KBStore" Type="Int32" Nullable="false" />
+    <Property Name="KBdisplay" Type="Int32" />
+    <Property Name="TWStore" Type="Int32" Nullable="false" />
+    <Property Name="TWdisplay" Type="Int32" />
+    <NavigationProperty Name="deliveryorders" Relationship="betterlimitedModel.ForeignKey_DProductID10" FromRole="product" ToRole="deliveryorder" />
+    <NavigationProperty Name="deliveryorders1" Relationship="betterlimitedModel.ForeignKey_DProductID2" FromRole="product" ToRole="deliveryorder" />
+    <NavigationProperty Name="deliveryorders2" Relationship="betterlimitedModel.ForeignKey_DProductID3" FromRole="product" ToRole="deliveryorder" />
+    <NavigationProperty Name="deliveryorders3" Relationship="betterlimitedModel.ForeignKey_DProductID4" FromRole="product" ToRole="deliveryorder" />
+    <NavigationProperty Name="deliveryorders4" Relationship="betterlimitedModel.ForeignKey_DProductID5" FromRole="product" ToRole="deliveryorder" />
+    <NavigationProperty Name="deliveryorders5" Relationship="betterlimitedModel.ForeignKey_DProductID6" FromRole="product" ToRole="deliveryorder" />
+    <NavigationProperty Name="deliveryorders6" Relationship="betterlimitedModel.ForeignKey_DProductID7" FromRole="product" ToRole="deliveryorder" />
+    <NavigationProperty Name="deliveryorders7" Relationship="betterlimitedModel.ForeignKey_DProductID8" FromRole="product" ToRole="deliveryorder" />
+    <NavigationProperty Name="deliveryorders8" Relationship="betterlimitedModel.ForeignKey_DProductID9" FromRole="product" ToRole="deliveryorder" />
+    <NavigationProperty Name="installationorders" Relationship="betterlimitedModel.ForeignKey_iProductID1" FromRole="product" ToRole="installationorder" />
+    <NavigationProperty Name="installationorders1" Relationship="betterlimitedModel.ForeignKey_iProductID10" FromRole="product" ToRole="installationorder" />
+    <NavigationProperty Name="installationorders2" Relationship="betterlimitedModel.ForeignKey_iProductID2" FromRole="product" ToRole="installationorder" />
+    <NavigationProperty Name="installationorders3" Relationship="betterlimitedModel.ForeignKey_iProductID3" FromRole="product" ToRole="installationorder" />
+    <NavigationProperty Name="installationorders4" Relationship="betterlimitedModel.ForeignKey_iProductID4" FromRole="product" ToRole="installationorder" />
+    <NavigationProperty Name="installationorders5" Relationship="betterlimitedModel.ForeignKey_iProductID5" FromRole="product" ToRole="installationorder" />
+    <NavigationProperty Name="installationorders6" Relationship="betterlimitedModel.ForeignKey_iProductID6" FromRole="product" ToRole="installationorder" />
+    <NavigationProperty Name="installationorders7" Relationship="betterlimitedModel.ForeignKey_iProductID7" FromRole="product" ToRole="installationorder" />
+    <NavigationProperty Name="installationorders8" Relationship="betterlimitedModel.ForeignKey_iProductID8" FromRole="product" ToRole="installationorder" />
+    <NavigationProperty Name="installationorders9" Relationship="betterlimitedModel.ForeignKey_iProductID9" FromRole="product" ToRole="installationorder" />
+    <NavigationProperty Name="purchaseitem" Relationship="betterlimitedModel.ForeignKey_ProductID" FromRole="product" ToRole="purchaseitem" />
+    <NavigationProperty Name="reorders" Relationship="betterlimitedModel.ForeignKey_ProductID1" FromRole="product" ToRole="reorder" />
+    <NavigationProperty Name="reorders1" Relationship="betterlimitedModel.ForeignKey_ProductID10" FromRole="product" ToRole="reorder" />
+    <NavigationProperty Name="reorders2" Relationship="betterlimitedModel.ForeignKey_ProductID2" FromRole="product" ToRole="reorder" />
+    <NavigationProperty Name="reorders3" Relationship="betterlimitedModel.ForeignKey_ProductID3" FromRole="product" ToRole="reorder" />
+    <NavigationProperty Name="reorders4" Relationship="betterlimitedModel.ForeignKey_ProductID4" FromRole="product" ToRole="reorder" />
+    <NavigationProperty Name="reorders5" Relationship="betterlimitedModel.ForeignKey_ProductID5" FromRole="product" ToRole="reorder" />
+    <NavigationProperty Name="reorders6" Relationship="betterlimitedModel.ForeignKey_ProductID6" FromRole="product" ToRole="reorder" />
+    <NavigationProperty Name="reorders7" Relationship="betterlimitedModel.ForeignKey_ProductID7" FromRole="product" ToRole="reorder" />
+    <NavigationProperty Name="reorders8" Relationship="betterlimitedModel.ForeignKey_ProductID8" FromRole="product" ToRole="reorder" />
+    <NavigationProperty Name="reorders9" Relationship="betterlimitedModel.ForeignKey_ProductID9" FromRole="product" ToRole="reorder" />
+    <NavigationProperty Name="supplier" Relationship="betterlimitedModel.ForeignKey_SupplierID" FromRole="product" ToRole="supplier" />
+    <NavigationProperty Name="type" Relationship="betterlimitedModel.ForeignKey_TypeID" FromRole="product" ToRole="type" />
+  </EntityType>
+  <EntityType Name="purchaseitem">
+    <Key>
+      <PropertyRef Name="ProductID" />
+    </Key>
+    <Property Name="PurchaseOrderID" Type="Int32" Nullable="false" />
+    <Property Name="ProductID" Type="Int32" Nullable="false" />
+    <Property Name="Quanity" Type="Int32" Nullable="false" />
+    <Property Name="Price" Type="Double" Nullable="false" />
+    <Property Name="Status" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="product" Relationship="betterlimitedModel.ForeignKey_ProductID" FromRole="purchaseitem" ToRole="product" />
+    <NavigationProperty Name="purchasingorder" Relationship="betterlimitedModel.ForeignKey_PurchaseOrderID" FromRole="purchaseitem" ToRole="purchasingorder" />
+  </EntityType>
+  <EntityType Name="purchasingorder">
+    <Key>
+      <PropertyRef Name="purchasingorderID" />
+    </Key>
+    <Property Name="purchasingorderID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="PurchaseOrderCreateDate" Type="DateTime" Nullable="false" />
+    <Property Name="StaffID" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="purchaseitems" Relationship="betterlimitedModel.ForeignKey_PurchaseOrderID" FromRole="purchasingorder" ToRole="purchaseitem" />
+    <NavigationProperty Name="staff" Relationship="betterlimitedModel.ForeignKey_StaffID" FromRole="purchasingorder" ToRole="staff" />
+  </EntityType>
+  <EntityType Name="reorder">
+    <Key>
+      <PropertyRef Name="ReorderID" />
+    </Key>
+    <Property Name="ReorderID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ReorderCreatedDate" Type="DateTime" Nullable="false" />
+    <Property Name="Approve" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="Product1" Type="Int32" Nullable="false" />
+    <Property Name="Product2" Type="Int32" />
+    <Property Name="Product3" Type="Int32" />
+    <Property Name="Product4" Type="Int32" />
+    <Property Name="Product5" Type="Int32" />
+    <Property Name="Product6" Type="Int32" />
+    <Property Name="Product7" Type="Int32" />
+    <Property Name="Product8" Type="Int32" />
+    <Property Name="Product9" Type="Int32" />
+    <Property Name="Product10" Type="Int32" />
+    <NavigationProperty Name="product" Relationship="betterlimitedModel.ForeignKey_ProductID1" FromRole="reorder" ToRole="product" />
+    <NavigationProperty Name="product11" Relationship="betterlimitedModel.ForeignKey_ProductID10" FromRole="reorder" ToRole="product" />
+    <NavigationProperty Name="product12" Relationship="betterlimitedModel.ForeignKey_ProductID2" FromRole="reorder" ToRole="product" />
+    <NavigationProperty Name="product13" Relationship="betterlimitedModel.ForeignKey_ProductID3" FromRole="reorder" ToRole="product" />
+    <NavigationProperty Name="product14" Relationship="betterlimitedModel.ForeignKey_ProductID4" FromRole="reorder" ToRole="product" />
+    <NavigationProperty Name="product15" Relationship="betterlimitedModel.ForeignKey_ProductID5" FromRole="reorder" ToRole="product" />
+    <NavigationProperty Name="product16" Relationship="betterlimitedModel.ForeignKey_ProductID6" FromRole="reorder" ToRole="product" />
+    <NavigationProperty Name="product17" Relationship="betterlimitedModel.ForeignKey_ProductID7" FromRole="reorder" ToRole="product" />
+    <NavigationProperty Name="product18" Relationship="betterlimitedModel.ForeignKey_ProductID8" FromRole="reorder" ToRole="product" />
+    <NavigationProperty Name="product19" Relationship="betterlimitedModel.ForeignKey_ProductID9" FromRole="reorder" ToRole="product" />
+  </EntityType>
+  <EntityType Name="saleorder">
+    <Key>
+      <PropertyRef Name="orderID" />
+    </Key>
+    <Property Name="orderID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Date_Of_Purchase" Type="DateTime" Nullable="false" />
+    <Property Name="orderType" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="DeliveryOrderID" Type="Int32" />
+    <Property Name="InstallationOrderID" Type="Int32" />
+    <Property Name="storeID" Type="Int32" />
+    <Property Name="staffID" Type="Int32" />
+    <Property Name="CustomerID" Type="Int32" />
+    <Property Name="TotalCharge" Type="Double" Nullable="false" />
+    <Property Name="Addition_Charge" Type="Double" />
+    <Property Name="DepositCharge" Type="Double" />
+    <Property Name="PayAmount" Type="Double" />
+    <Property Name="PayMethod" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Active" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Product1_ID" Type="Int32" />
+    <Property Name="Product1_Qty" Type="Int32" />
+    <Property Name="Product2_ID" Type="Int32" />
+    <Property Name="Product2_Qty" Type="Int32" />
+    <Property Name="Product3_ID" Type="Int32" />
+    <Property Name="Product3_Qty" Type="Int32" />
+    <Property Name="Product4_ID" Type="Int32" />
+    <Property Name="Product4_Qty" Type="Int32" />
+    <Property Name="Product5_ID" Type="Int32" />
+    <Property Name="Product5_Qty" Type="Int32" />
+    <Property Name="Product6_ID" Type="Int32" />
+    <Property Name="Product6_Qty" Type="Int32" />
+    <Property Name="Product7_ID" Type="Int32" />
+    <Property Name="Product7_Qty" Type="Int32" />
+    <Property Name="Product8_ID" Type="Int32" />
+    <Property Name="Product8_Qty" Type="Int32" />
+    <Property Name="Product9_ID" Type="Int32" />
+    <Property Name="Product9_Qty" Type="Int32" />
+    <Property Name="Product10_ID" Type="Int32" />
+    <Property Name="Product10_Qty" Type="Int32" />
+    <Property Name="Product1_display" Type="Int32" />
+    <Property Name="Product2_display" Type="Int32" />
+    <Property Name="Product3_display" Type="Int32" />
+    <Property Name="Product4_display" Type="Int32" />
+    <Property Name="Product5_display" Type="Int32" />
+    <Property Name="Product6_display" Type="Int32" />
+    <Property Name="Product7_display" Type="Int32" />
+    <Property Name="Product8_display" Type="Int32" />
+    <Property Name="Product9_display" Type="Int32" />
+    <Property Name="Product10_display" Type="Int32" />
+  </EntityType>
+  <EntityType Name="schedule">
+    <Key>
+      <PropertyRef Name="dateofservice" />
+      <PropertyRef Name="SessionID" />
+    </Key>
+    <Property Name="dateofservice" Type="DateTime" Nullable="false" />
+    <Property Name="SessionID" Type="Int32" Nullable="false" />
+    <Property Name="D_staffID" Type="Int32" Nullable="false" />
+    <Property Name="D_staff2ID" Type="Int32" Nullable="false" />
+    <Property Name="I_staffID" Type="Int32" Nullable="false" />
+    <Property Name="I_staffID2" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="session" Relationship="betterlimitedModel.ForeignKey_Session" FromRole="schedule" ToRole="session" />
+    <NavigationProperty Name="staff" Relationship="betterlimitedModel.ForeignKey_StaffID_D" FromRole="schedule" ToRole="staff" />
+    <NavigationProperty Name="staff1" Relationship="betterlimitedModel.ForeignKey_StaffID_D1" FromRole="schedule" ToRole="staff" />
+    <NavigationProperty Name="staff2" Relationship="betterlimitedModel.ForeignKey_StaffID_I1" FromRole="schedule" ToRole="staff" />
+    <NavigationProperty Name="staff3" Relationship="betterlimitedModel.ForeignKey_StaffID_I2" FromRole="schedule" ToRole="staff" />
+  </EntityType>
+  <EntityType Name="session">
+    <Key>
+      <PropertyRef Name="Session1" />
+    </Key>
+    <Property Name="Session1" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="SessionTime" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="deliveryorders" Relationship="betterlimitedModel.ForeignKey_SessionID" FromRole="session" ToRole="deliveryorder" />
+    <NavigationProperty Name="schedules" Relationship="betterlimitedModel.ForeignKey_Session" FromRole="session" ToRole="schedule" />
+  </EntityType>
+  <EntityType Name="shoprecovery">
+    <Key>
+      <PropertyRef Name="recoveryid" />
+    </Key>
+    <Property Name="recoveryid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ProductID" Type="Int32" Nullable="false" />
+    <Property Name="Quanity" Type="Int32" Nullable="false" />
+    <Property Name="status" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="dateofcreate" Type="DateTime" Nullable="false" />
+    <Property Name="StoreID" Type="Int32" Nullable="false" />
+    <Property Name="dateofrecover" Type="DateTime" />
+    <Property Name="Reason" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="soldproduct">
+    <Key>
+      <PropertyRef Name="soldproductid" />
+    </Key>
+    <Property Name="soldproductid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="SaleorderID" Type="Int32" Nullable="false" />
+    <Property Name="productID" Type="Int32" Nullable="false" />
+    <Property Name="ProductPrePrice" Type="Double" Nullable="false" />
+    <Property Name="Quantity" Type="Int32" Nullable="false" />
+    <Property Name="Displayed" Type="Int32" Nullable="false" />
+    <Property Name="TotalAmount" Type="Double" Nullable="false" />
+    <Property Name="Able" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="staff">
+    <Key>
+      <PropertyRef Name="StaffID" />
+    </Key>
+    <Property Name="StaffID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="HKID" Type="String" MaxLength="16" FixedLength="false" Unicode="false" />
+    <Property Name="Username" Type="String" Nullable="false" MaxLength="24" FixedLength="false" Unicode="false" />
+    <Property Name="Firstname" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="Lastname" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="Password" Type="String" Nullable="false" MaxLength="32" FixedLength="false" Unicode="false" />
+    <Property Name="PhoneNumber" Type="String" Nullable="false" MaxLength="14" FixedLength="false" Unicode="false" />
+    <Property Name="EmailAddress" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="Region" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="AddressLine1" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="AddressLine2" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="AddressLine3" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Gender" Type="String" Nullable="false" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="DepartmentID" Type="Int32" />
+    <Property Name="StoreID" Type="Int32" />
+    <Property Name="BrithDate" Type="DateTime" />
+    <NavigationProperty Name="department" Relationship="betterlimitedModel.ForeignKey_DepartmentID" FromRole="staff" ToRole="department" />
+    <NavigationProperty Name="purchasingorders" Relationship="betterlimitedModel.ForeignKey_StaffID" FromRole="staff" ToRole="purchasingorder" />
+    <NavigationProperty Name="schedules" Relationship="betterlimitedModel.ForeignKey_StaffID_D" FromRole="staff" ToRole="schedule" />
+    <NavigationProperty Name="schedules1" Relationship="betterlimitedModel.ForeignKey_StaffID_D1" FromRole="staff" ToRole="schedule" />
+    <NavigationProperty Name="schedules2" Relationship="betterlimitedModel.ForeignKey_StaffID_I1" FromRole="staff" ToRole="schedule" />
+    <NavigationProperty Name="schedules3" Relationship="betterlimitedModel.ForeignKey_StaffID_I2" FromRole="staff" ToRole="schedule" />
+  </EntityType>
+  <EntityType Name="store">
+    <Key>
+      <PropertyRef Name="StoreID" />
+    </Key>
+    <Property Name="StoreID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="StoreName" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="StoreManager" Type="Int32" />
+    <Property Name="Phonenumber" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Address1" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Address2" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Address3" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Region" Type="String" Nullable="false" MaxLength="60" FixedLength="false" Unicode="false" />
+    <Property Name="Available" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="supplier">
+    <Key>
+      <PropertyRef Name="SupplierID" />
+    </Key>
+    <Property Name="SupplierID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="SupplierName" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="Address1" Type="String" Nullable="false" MaxLength="70" FixedLength="false" Unicode="false" />
+    <Property Name="Address2" Type="String" MaxLength="70" FixedLength="false" Unicode="false" />
+    <Property Name="Address3" Type="String" MaxLength="70" FixedLength="false" Unicode="false" />
+    <Property Name="PhoneNumber" Type="String" Nullable="false" MaxLength="13" FixedLength="false" Unicode="false" />
+    <Property Name="Available" Type="Int32" Nullable="false" />
+    <Property Name="Region" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="products" Relationship="betterlimitedModel.ForeignKey_SupplierID" FromRole="supplier" ToRole="product" />
+  </EntityType>
+  <EntityType Name="type">
+    <Key>
+      <PropertyRef Name="TypeID" />
+    </Key>
+    <Property Name="TypeID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TypeName" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="products" Relationship="betterlimitedModel.ForeignKey_TypeID" FromRole="type" ToRole="product" />
+  </EntityType>
+  <Association Name="ForeignKey_DCustomerID">
+    <End Type="betterlimitedModel.customer" Role="customer" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Type="betterlimitedModel.deliveryorder" Role="deliveryorder" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="customer">
+        <PropertyRef Name="CustomerID" />
+      </Principal>
+      <Dependent Role="deliveryorder">
+        <PropertyRef Name="CustomerID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ForeignKey_DProductID10">
+    <End Type="betterlimitedModel.product" Role="product" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Type="betterlimitedModel.deliveryorder" Role="deliveryorder" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="product">
+        <PropertyRef Name="ProductID" />
+      </Principal>
+      <Dependent Role="deliveryorder">
+        <PropertyRef Name="DeliveryProductID_10" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ForeignKey_DProductID2">
+    <End Type="betterlimitedModel.product" Role="product" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Type="betterlimitedModel.deliveryorder" Role="deliveryorder" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="product">
+        <PropertyRef Name="ProductID" />
+      </Principal>
+      <Dependent Role="deliveryorder">
+        <PropertyRef Name="DeliveryProductID_2" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ForeignKey_DProductID3">
+    <End Type="betterlimitedModel.product" Role="product" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Type="betterlimitedModel.deliveryorder" Role="deliveryorder" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="product">
+        <PropertyRef Name="ProductID" />
+      </Principal>
+      <Dependent Role="deliveryorder">
+        <PropertyRef Name="DeliveryProductID_3" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ForeignKey_DProductID4">
+    <End Type="betterlimitedModel.product" Role="product" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Type="betterlimitedModel.deliveryorder" Role="deliveryorder" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="product">
+        <PropertyRef Name="ProductID" />
+      </Principal>
+      <Dependent Role="deliveryorder">
+        <PropertyRef Name="DeliveryProductID_4" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ForeignKey_DProductID5">
+    <End Type="betterlimitedModel.product" Role="product" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Type="betterlimitedModel.deliveryorder" Role="deliveryorder" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="product">
+        <PropertyRef Name="ProductID" />
+      </Principal>
+      <Dependent Role="deliveryorder">
+        <PropertyRef Name="DeliveryProductID_5" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ForeignKey_DProductID6">
+    <End Type="betterlimitedModel.product" Role="product" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Type="betterlimitedModel.deliveryorder" Role="deliveryorder" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="product">
+        <PropertyRef Name="ProductID" />
+      </Principal>
+      <Dependent Role="deliveryorder">
+        <PropertyRef Name="DeliveryProductID_6" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ForeignKey_DProductID7">
+    <End Type="betterlimitedModel.product" Role="product" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Type="betterlimitedModel.deliveryorder" Role="deliveryorder" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="product">
+        <PropertyRef Name="ProductID" />
+      </Principal>
+      <Dependent Role="deliveryorder">
+        <PropertyRef Name="DeliveryProductID_7" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ForeignKey_DProductID8">
+    <End Type="betterlimitedModel.product" Role="product" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Type="betterlimitedModel.deliveryorder" Role="deliveryorder" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="product">
+        <PropertyRef Name="ProductID" />
+      </Principal>
+      <Dependent Role="deliveryorder">
+        <PropertyRef Name="DeliveryProductID_8" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ForeignKey_DProductID9">
+    <End Type="betterlimitedModel.product" Role="product" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Type="betterlimitedModel.deliveryorder" Role="deliveryorder" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="product">
+        <PropertyRef Name="ProductID" />
+      </Principal>
+      <Dependent Role="deliveryorder">
+        <PropertyRef Name="DeliveryProductID_9" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ForeignKey_SessionID">
+    <End Type="betterlimitedModel.session" Role="session" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Type="betterlimitedModel.deliveryorder" Role="deliveryorder" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="session">
+        <PropertyRef Name="Session1" />
+      </Principal>
+      <Dependent Role="deliveryorder">
+        <PropertyRef Name="SessionID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ForeignKey_DepartmentID">
+    <End Type="betterlimitedModel.department" Role="department" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Type="betterlimitedModel.staff" Role="staff" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="department">
+        <PropertyRef Name="DepartmentID" />
+      </Principal>
+      <Dependent Role="staff">
+        <PropertyRef Name="DepartmentID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ForeignKey_iProductID1">
+    <End Type="betterlimitedModel.product" Role="product" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Type="betterlimitedModel.installationorder" Role="installationorder" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="product">
+        <PropertyRef Name="ProductID" />
+      </Principal>
+      <Dependent Role="installationorder">
+        <PropertyRef Name="InstallProduct1" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ForeignKey_iProductID10">
+    <End Type="betterlimitedModel.product" Role="product" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Type="betterlimitedModel.installationorder" Role="installationorder" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="product">
+        <PropertyRef Name="ProductID" />
+      </Principal>
+      <Dependent Role="installationorder">
+        <PropertyRef Name="InstallProduct10" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ForeignKey_iProductID2">
+    <End Type="betterlimitedModel.product" Role="product" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Type="betterlimitedModel.installationorder" Role="installationorder" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="product">
+        <PropertyRef Name="ProductID" />
+      </Principal>
+      <Dependent Role="installationorder">
+        <PropertyRef Name="InstallProduct2" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ForeignKey_iProductID3">
+    <End Type="betterlimitedModel.product" Role="product" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Type="betterlimitedModel.installationorder" Role="installationorder" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="product">
+        <PropertyRef Name="ProductID" />
+      </Principal>
+      <Dependent Role="installationorder">
+        <PropertyRef Name="InstallProduct3" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ForeignKey_iProductID4">
+    <End Type="betterlimitedModel.product" Role="product" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Type="betterlimitedModel.installationorder" Role="installationorder" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="product">
+        <PropertyRef Name="ProductID" />
+      </Principal>
+      <Dependent Role="installationorder">
+        <PropertyRef Name="InstallProduct4" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ForeignKey_iProductID5">
+    <End Type="betterlimitedModel.product" Role="product" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Type="betterlimitedModel.installationorder" Role="installationorder" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="product">
+        <PropertyRef Name="ProductID" />
+      </Principal>
+      <Dependent Role="installationorder">
+        <PropertyRef Name="InstallProduct5" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ForeignKey_iProductID6">
+    <End Type="betterlimitedModel.product" Role="product" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Type="betterlimitedModel.installationorder" Role="installationorder" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="product">
+        <PropertyRef Name="ProductID" />
+      </Principal>
+      <Dependent Role="installationorder">
+        <PropertyRef Name="InstallProduct6" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ForeignKey_iProductID7">
+    <End Type="betterlimitedModel.product" Role="product" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Type="betterlimitedModel.installationorder" Role="installationorder" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="product">
+        <PropertyRef Name="ProductID" />
+      </Principal>
+      <Dependent Role="installationorder">
+        <PropertyRef Name="InstallProduct7" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ForeignKey_iProductID8">
+    <End Type="betterlimitedModel.product" Role="product" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Type="betterlimitedModel.installationorder" Role="installationorder" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="product">
+        <PropertyRef Name="ProductID" />
+      </Principal>
+      <Dependent Role="installationorder">
+        <PropertyRef Name="InstallProduct8" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ForeignKey_iProductID9">
+    <End Type="betterlimitedModel.product" Role="product" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Type="betterlimitedModel.installationorder" Role="installationorder" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="product">
+        <PropertyRef Name="ProductID" />
+      </Principal>
+      <Dependent Role="installationorder">
+        <PropertyRef Name="InstallProduct9" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ForeignKey_ProductID">
+    <End Type="betterlimitedModel.product" Role="product" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Type="betterlimitedModel.purchaseitem" Role="purchaseitem" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="product">
+        <PropertyRef Name="ProductID" />
+      </Principal>
+      <Dependent Role="purchaseitem">
+        <PropertyRef Name="ProductID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ForeignKey_ProductID1">
+    <End Type="betterlimitedModel.product" Role="product" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Type="betterlimitedModel.reorder" Role="reorder" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="product">
+        <PropertyRef Name="ProductID" />
+      </Principal>
+      <Dependent Role="reorder">
+        <PropertyRef Name="Product1" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ForeignKey_ProductID10">
+    <End Type="betterlimitedModel.product" Role="product" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Type="betterlimitedModel.reorder" Role="reorder" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="product">
+        <PropertyRef Name="ProductID" />
+      </Principal>
+      <Dependent Role="reorder">
+        <PropertyRef Name="Product10" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ForeignKey_ProductID2">
+    <End Type="betterlimitedModel.product" Role="product" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Type="betterlimitedModel.reorder" Role="reorder" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="product">
+        <PropertyRef Name="ProductID" />
+      </Principal>
+      <Dependent Role="reorder">
+        <PropertyRef Name="Product2" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ForeignKey_ProductID3">
+    <End Type="betterlimitedModel.product" Role="product" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Type="betterlimitedModel.reorder" Role="reorder" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="product">
+        <PropertyRef Name="ProductID" />
+      </Principal>
+      <Dependent Role="reorder">
+        <PropertyRef Name="Product3" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ForeignKey_ProductID4">
+    <End Type="betterlimitedModel.product" Role="product" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Type="betterlimitedModel.reorder" Role="reorder" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="product">
+        <PropertyRef Name="ProductID" />
+      </Principal>
+      <Dependent Role="reorder">
+        <PropertyRef Name="Product4" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ForeignKey_ProductID5">
+    <End Type="betterlimitedModel.product" Role="product" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Type="betterlimitedModel.reorder" Role="reorder" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="product">
+        <PropertyRef Name="ProductID" />
+      </Principal>
+      <Dependent Role="reorder">
+        <PropertyRef Name="Product5" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ForeignKey_ProductID6">
+    <End Type="betterlimitedModel.product" Role="product" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Type="betterlimitedModel.reorder" Role="reorder" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="product">
+        <PropertyRef Name="ProductID" />
+      </Principal>
+      <Dependent Role="reorder">
+        <PropertyRef Name="Product6" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ForeignKey_ProductID7">
+    <End Type="betterlimitedModel.product" Role="product" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Type="betterlimitedModel.reorder" Role="reorder" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="product">
+        <PropertyRef Name="ProductID" />
+      </Principal>
+      <Dependent Role="reorder">
+        <PropertyRef Name="Product7" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ForeignKey_ProductID8">
+    <End Type="betterlimitedModel.product" Role="product" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Type="betterlimitedModel.reorder" Role="reorder" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="product">
+        <PropertyRef Name="ProductID" />
+      </Principal>
+      <Dependent Role="reorder">
+        <PropertyRef Name="Product8" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ForeignKey_ProductID9">
+    <End Type="betterlimitedModel.product" Role="product" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Type="betterlimitedModel.reorder" Role="reorder" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="product">
+        <PropertyRef Name="ProductID" />
+      </Principal>
+      <Dependent Role="reorder">
+        <PropertyRef Name="Product9" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ForeignKey_SupplierID">
+    <End Type="betterlimitedModel.supplier" Role="supplier" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Type="betterlimitedModel.product" Role="product" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="supplier">
+        <PropertyRef Name="SupplierID" />
+      </Principal>
+      <Dependent Role="product">
+        <PropertyRef Name="SupplierID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ForeignKey_TypeID">
+    <End Type="betterlimitedModel.type" Role="type" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Type="betterlimitedModel.product" Role="product" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="type">
+        <PropertyRef Name="TypeID" />
+      </Principal>
+      <Dependent Role="product">
+        <PropertyRef Name="TypeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ForeignKey_PurchaseOrderID">
+    <End Type="betterlimitedModel.purchasingorder" Role="purchasingorder" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Type="betterlimitedModel.purchaseitem" Role="purchaseitem" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="purchasingorder">
+        <PropertyRef Name="purchasingorderID" />
+      </Principal>
+      <Dependent Role="purchaseitem">
+        <PropertyRef Name="PurchaseOrderID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ForeignKey_StaffID">
+    <End Type="betterlimitedModel.staff" Role="staff" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Type="betterlimitedModel.purchasingorder" Role="purchasingorder" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="staff">
+        <PropertyRef Name="StaffID" />
+      </Principal>
+      <Dependent Role="purchasingorder">
+        <PropertyRef Name="StaffID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ForeignKey_Session">
+    <End Type="betterlimitedModel.session" Role="session" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Type="betterlimitedModel.schedule" Role="schedule" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="session">
+        <PropertyRef Name="Session1" />
+      </Principal>
+      <Dependent Role="schedule">
+        <PropertyRef Name="SessionID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ForeignKey_StaffID_D">
+    <End Type="betterlimitedModel.staff" Role="staff" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Type="betterlimitedModel.schedule" Role="schedule" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="staff">
+        <PropertyRef Name="StaffID" />
+      </Principal>
+      <Dependent Role="schedule">
+        <PropertyRef Name="D_staffID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ForeignKey_StaffID_D1">
+    <End Type="betterlimitedModel.staff" Role="staff" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Type="betterlimitedModel.schedule" Role="schedule" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="staff">
+        <PropertyRef Name="StaffID" />
+      </Principal>
+      <Dependent Role="schedule">
+        <PropertyRef Name="D_staff2ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ForeignKey_StaffID_I1">
+    <End Type="betterlimitedModel.staff" Role="staff" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Type="betterlimitedModel.schedule" Role="schedule" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="staff">
+        <PropertyRef Name="StaffID" />
+      </Principal>
+      <Dependent Role="schedule">
+        <PropertyRef Name="I_staffID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ForeignKey_StaffID_I2">
+    <End Type="betterlimitedModel.staff" Role="staff" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Type="betterlimitedModel.schedule" Role="schedule" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="staff">
+        <PropertyRef Name="StaffID" />
+      </Principal>
+      <Dependent Role="schedule">
+        <PropertyRef Name="I_staffID2" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

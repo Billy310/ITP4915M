@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="c246a6f05fa842dfbab436f8d92c9a14" Name="Diagram1" ZoomLevel="56">
+        <EntityTypeShape EntityType="betterlimitedModel.customer" Width="1.5" PointX="3" PointY="3" />
+        <EntityTypeShape EntityType="betterlimitedModel.defectitem" Width="1.5" PointX="5.75" PointY="0.75" />
+        <EntityTypeShape EntityType="betterlimitedModel.deliveryorder" Width="1.5" PointX="5.25" PointY="8.375" />
+        <EntityTypeShape EntityType="betterlimitedModel.department" Width="1.5" PointX="1.5" PointY="38.875" />
+        <EntityTypeShape EntityType="betterlimitedModel.installationorder" Width="1.5" PointX="5.25" PointY="17.625" />
+        <EntityTypeShape EntityType="betterlimitedModel.product" Width="1.5" PointX="3" PointY="10.625" />
+        <EntityTypeShape EntityType="betterlimitedModel.purchaseitem" Width="1.5" PointX="8.25" PointY="14.5" />
+        <EntityTypeShape EntityType="betterlimitedModel.purchasingorder" Width="1.5" PointX="6" PointY="38.625" />
+        <EntityTypeShape EntityType="betterlimitedModel.reorder" Width="1.5" PointX="5.25" PointY="29.875" />
+        <EntityTypeShape EntityType="betterlimitedModel.saleorder" Width="1.5" PointX="7.75" PointY="0.75" />
+        <EntityTypeShape EntityType="betterlimitedModel.schedule" Width="1.5" PointX="8" PointY="23.25" />
+        <EntityTypeShape EntityType="betterlimitedModel.session" Width="1.5" PointX="3" PointY="7.5" />
+        <EntityTypeShape EntityType="betterlimitedModel.shoprecovery" Width="1.5" PointX="9.75" PointY="0.75" />
+        <EntityTypeShape EntityType="betterlimitedModel.soldproduct" Width="1.5" PointX="9.75" PointY="3.75" />
+        <EntityTypeShape EntityType="betterlimitedModel.staff" Width="1.5" PointX="3.75" PointY="37" />
+        <EntityTypeShape EntityType="betterlimitedModel.store" Width="1.5" PointX="9.75" PointY="7.75" />
+        <EntityTypeShape EntityType="betterlimitedModel.supplier" Width="1.5" PointX="0.75" PointY="14.25" />
+        <EntityTypeShape EntityType="betterlimitedModel.type" Width="1.5" PointX="0.75" PointY="11.875" />
+        <AssociationConnector Association="betterlimitedModel.ForeignKey_DCustomerID" />
+        <AssociationConnector Association="betterlimitedModel.ForeignKey_DProductID10" />
+        <AssociationConnector Association="betterlimitedModel.ForeignKey_DProductID2" />
+        <AssociationConnector Association="betterlimitedModel.ForeignKey_DProductID3" />
+        <AssociationConnector Association="betterlimitedModel.ForeignKey_DProductID4" />
+        <AssociationConnector Association="betterlimitedModel.ForeignKey_DProductID5" />
+        <AssociationConnector Association="betterlimitedModel.ForeignKey_DProductID6" />
+        <AssociationConnector Association="betterlimitedModel.ForeignKey_DProductID7" />
+        <AssociationConnector Association="betterlimitedModel.ForeignKey_DProductID8" />
+        <AssociationConnector Association="betterlimitedModel.ForeignKey_DProductID9" />
+        <AssociationConnector Association="betterlimitedModel.ForeignKey_SessionID" />
+        <AssociationConnector Association="betterlimitedModel.ForeignKey_DepartmentID" />
+        <AssociationConnector Association="betterlimitedModel.ForeignKey_iProductID1" />
+        <AssociationConnector Association="betterlimitedModel.ForeignKey_iProductID10" />
+        <AssociationConnector Association="betterlimitedModel.ForeignKey_iProductID2" />
+        <AssociationConnector Association="betterlimitedModel.ForeignKey_iProductID3" />
+        <AssociationConnector Association="betterlimitedModel.ForeignKey_iProductID4" />
+        <AssociationConnector Association="betterlimitedModel.ForeignKey_iProductID5" />
+        <AssociationConnector Association="betterlimitedModel.ForeignKey_iProductID6" />
+        <AssociationConnector Association="betterlimitedModel.ForeignKey_iProductID7" />
+        <AssociationConnector Association="betterlimitedModel.ForeignKey_iProductID8" />
+        <AssociationConnector Association="betterlimitedModel.ForeignKey_iProductID9" />
+        <AssociationConnector Association="betterlimitedModel.ForeignKey_ProductID" />
+        <AssociationConnector Association="betterlimitedModel.ForeignKey_ProductID1" />
+        <AssociationConnector Association="betterlimitedModel.ForeignKey_ProductID10" />
+        <AssociationConnector Association="betterlimitedModel.ForeignKey_ProductID2" />
+        <AssociationConnector Association="betterlimitedModel.ForeignKey_ProductID3" />
+        <AssociationConnector Association="betterlimitedModel.ForeignKey_ProductID4" />
+        <AssociationConnector Association="betterlimitedModel.ForeignKey_ProductID5" />
+        <AssociationConnector Association="betterlimitedModel.ForeignKey_ProductID6" />
+        <AssociationConnector Association="betterlimitedModel.ForeignKey_ProductID7" />
+        <AssociationConnector Association="betterlimitedModel.ForeignKey_ProductID8" />
+        <AssociationConnector Association="betterlimitedModel.ForeignKey_ProductID9" />
+        <AssociationConnector Association="betterlimitedModel.ForeignKey_SupplierID" />
+        <AssociationConnector Association="betterlimitedModel.ForeignKey_TypeID" />
+        <AssociationConnector Association="betterlimitedModel.ForeignKey_PurchaseOrderID" />
+        <AssociationConnector Association="betterlimitedModel.ForeignKey_StaffID" />
+        <AssociationConnector Association="betterlimitedModel.ForeignKey_Session" />
+        <AssociationConnector Association="betterlimitedModel.ForeignKey_StaffID_D" />
+        <AssociationConnector Association="betterlimitedModel.ForeignKey_StaffID_D1" />
+        <AssociationConnector Association="betterlimitedModel.ForeignKey_StaffID_I1" />
+        <AssociationConnector Association="betterlimitedModel.ForeignKey_StaffID_I2" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

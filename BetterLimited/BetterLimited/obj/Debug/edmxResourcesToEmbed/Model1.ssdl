@@ -1,0 +1,1096 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="betterlimitedModel.Store" Provider="MySql.Data.MySqlClient" ProviderManifestToken="5.5" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="customer">
+    <Key>
+      <PropertyRef Name="CustomerID" />
+    </Key>
+    <Property Name="CustomerID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FirstName" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="LastName" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="CompanyName" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="ContactPersion" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Phone1" Type="varchar" MaxLength="13" Nullable="false" />
+    <Property Name="Phone2" Type="varchar" MaxLength="13" />
+    <Property Name="AddressLine1" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="AddressLine2" Type="varchar" MaxLength="50" />
+    <Property Name="AddressLine3" Type="varchar" MaxLength="50" />
+    <Property Name="Region" Type="varchar" MaxLength="25" />
+    <Property Name="Districts" Type="int" />
+    <Property Name="EmailAddress" Type="varchar" MaxLength="30" />
+  </EntityType>
+  <EntityType Name="defectitem">
+    <Key>
+      <PropertyRef Name="defectItemID" />
+    </Key>
+    <Property Name="defectItemID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SaleOrderID" Type="int" />
+    <Property Name="ProductID" Type="int" />
+    <Property Name="Quantity" Type="int" />
+    <Property Name="Reason" Type="varchar" MaxLength="100" />
+    <Property Name="HandleMethod" Type="varchar" MaxLength="40" />
+    <Property Name="RefundAmount" Type="double" />
+    <Property Name="SupplierReply" Type="varchar" MaxLength="100" />
+    <Property Name="Handle" Type="varchar" MaxLength="60" />
+    <Property Name="dateofreturn" Type="date" />
+  </EntityType>
+  <EntityType Name="deliveryorder">
+    <Key>
+      <PropertyRef Name="DeliveryOrderID" />
+    </Key>
+    <Property Name="DeliveryOrderID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="OrderID" Type="int" />
+    <Property Name="DWorkerID" Type="int" />
+    <Property Name="DeliveryDate" Type="date" />
+    <Property Name="timeofDelivery" Type="time" Precision="0" />
+    <Property Name="SessionID" Type="int" />
+    <Property Name="CustomerID" Type="int" />
+    <Property Name="D_Status" Type="varchar" MaxLength="30" />
+    <Property Name="DeliveryProductID_1" Type="int" Nullable="false" />
+    <Property Name="DeliveryProductID_2" Type="int" />
+    <Property Name="DeliveryProductID_3" Type="int" />
+    <Property Name="DeliveryProductID_4" Type="int" />
+    <Property Name="DeliveryProductID_5" Type="int" />
+    <Property Name="DeliveryProductID_6" Type="int" />
+    <Property Name="DeliveryProductID_7" Type="int" />
+    <Property Name="DeliveryProductID_8" Type="int" />
+    <Property Name="DeliveryProductID_9" Type="int" />
+    <Property Name="DeliveryProductID_10" Type="int" />
+    <Property Name="DeliveryProductID_1qty" Type="int" Nullable="false" />
+    <Property Name="DeliveryProductID_2qty" Type="int" Nullable="false" />
+    <Property Name="DeliveryProductID_3qty" Type="int" Nullable="false" />
+    <Property Name="DeliveryProductID_4qty" Type="int" Nullable="false" />
+    <Property Name="DeliveryProductID_5qty" Type="int" Nullable="false" />
+    <Property Name="DeliveryProductID_6qty" Type="int" Nullable="false" />
+    <Property Name="DeliveryProductID_7qty" Type="int" Nullable="false" />
+    <Property Name="DeliveryProductID_8qty" Type="int" Nullable="false" />
+    <Property Name="DeliveryProductID_9qty" Type="int" Nullable="false" />
+    <Property Name="DeliveryProductID_10qty" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="department">
+    <Key>
+      <PropertyRef Name="DepartmentID" />
+    </Key>
+    <Property Name="DepartmentID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DepartmentName" Type="varchar" MaxLength="30" Nullable="false" />
+  </EntityType>
+  <EntityType Name="installationorder">
+    <Key>
+      <PropertyRef Name="InstallationOrderID" />
+    </Key>
+    <Property Name="InstallationOrderID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SaleOrderID" Type="int" />
+    <Property Name="I_Worker" Type="int" />
+    <Property Name="SessionID" Type="int" />
+    <Property Name="I_status" Type="varchar" MaxLength="30" />
+    <Property Name="InstallationTime" Type="time" Precision="0" Nullable="false" />
+    <Property Name="InstallationDate" Type="date" />
+    <Property Name="InstallProduct1" Type="int" Nullable="false" />
+    <Property Name="InstallProduct2" Type="int" Nullable="false" />
+    <Property Name="InstallProduct3" Type="int" Nullable="false" />
+    <Property Name="InstallProduct4" Type="int" Nullable="false" />
+    <Property Name="InstallProduct5" Type="int" Nullable="false" />
+    <Property Name="InstallProduct6" Type="int" Nullable="false" />
+    <Property Name="InstallProduct7" Type="int" Nullable="false" />
+    <Property Name="InstallProduct8" Type="int" Nullable="false" />
+    <Property Name="InstallProduct9" Type="int" Nullable="false" />
+    <Property Name="InstallProduct10" Type="int" Nullable="false" />
+    <Property Name="InstallProduct1_qty" Type="int" Nullable="false" />
+    <Property Name="InstallProduct2_qty" Type="int" Nullable="false" />
+    <Property Name="InstallProduct3_qty" Type="int" Nullable="false" />
+    <Property Name="InstallProduct4_qty" Type="int" Nullable="false" />
+    <Property Name="InstallProduct5_qty" Type="int" Nullable="false" />
+    <Property Name="InstallProduct6_qty" Type="int" Nullable="false" />
+    <Property Name="InstallProduct7_qty" Type="int" Nullable="false" />
+    <Property Name="InstallProduct8_qty" Type="int" Nullable="false" />
+    <Property Name="InstallProduct9_qty" Type="int" Nullable="false" />
+    <Property Name="InstallProduct10_qty" Type="int" Nullable="false" />
+    <Property Name="InstallationStaffID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="product">
+    <Key>
+      <PropertyRef Name="ProductID" />
+    </Key>
+    <Property Name="ProductID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Reorder" Type="int" Nullable="false" />
+    <Property Name="RequireInstall" Type="int" />
+    <Property Name="SerialNum" Type="varchar" MaxLength="40" />
+    <Property Name="ProductName" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="Available" Type="int" Nullable="false" />
+    <Property Name="TypeID" Type="int" Nullable="false" />
+    <Property Name="Price" Type="int" Nullable="false" />
+    <Property Name="SupplierID" Type="int" Nullable="false" />
+    <Property Name="StockLevel" Type="int" />
+    <Property Name="Low_Standard" Type="int" Nullable="false" />
+    <Property Name="KBStore" Type="int" Nullable="false" />
+    <Property Name="KBdisplay" Type="int" />
+    <Property Name="TWStore" Type="int" Nullable="false" />
+    <Property Name="TWdisplay" Type="int" />
+  </EntityType>
+  <EntityType Name="purchaseitem">
+    <Key>
+      <PropertyRef Name="ProductID" />
+    </Key>
+    <Property Name="PurchaseOrderID" Type="int" Nullable="false" />
+    <Property Name="ProductID" Type="int" Nullable="false" />
+    <Property Name="Quanity" Type="int" Nullable="false" />
+    <Property Name="Price" Type="double" Nullable="false" />
+    <Property Name="Status" Type="varchar" MaxLength="20" Nullable="false" />
+  </EntityType>
+  <EntityType Name="purchasingorder">
+    <Key>
+      <PropertyRef Name="purchasingorderID" />
+    </Key>
+    <Property Name="purchasingorderID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="PurchaseOrderCreateDate" Type="date" Nullable="false" />
+    <Property Name="StaffID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="reorder">
+    <Key>
+      <PropertyRef Name="ReorderID" />
+    </Key>
+    <Property Name="ReorderID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ReorderCreatedDate" Type="date" Nullable="false" />
+    <Property Name="Approve" Type="varchar" MaxLength="30" />
+    <Property Name="Product1" Type="int" Nullable="false" />
+    <Property Name="Product2" Type="int" />
+    <Property Name="Product3" Type="int" />
+    <Property Name="Product4" Type="int" />
+    <Property Name="Product5" Type="int" />
+    <Property Name="Product6" Type="int" />
+    <Property Name="Product7" Type="int" />
+    <Property Name="Product8" Type="int" />
+    <Property Name="Product9" Type="int" />
+    <Property Name="Product10" Type="int" />
+  </EntityType>
+  <EntityType Name="saleorder">
+    <Key>
+      <PropertyRef Name="orderID" />
+    </Key>
+    <Property Name="orderID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Date_Of_Purchase" Type="date" Nullable="false" />
+    <Property Name="orderType" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="DeliveryOrderID" Type="int" />
+    <Property Name="InstallationOrderID" Type="int" />
+    <Property Name="storeID" Type="int" />
+    <Property Name="staffID" Type="int" />
+    <Property Name="CustomerID" Type="int" />
+    <Property Name="TotalCharge" Type="double" Nullable="false" />
+    <Property Name="Addition_Charge" Type="double" />
+    <Property Name="DepositCharge" Type="double" />
+    <Property Name="PayAmount" Type="double" />
+    <Property Name="PayMethod" Type="varchar" MaxLength="20" />
+    <Property Name="Active" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="Product1_ID" Type="int" />
+    <Property Name="Product1_Qty" Type="int" />
+    <Property Name="Product2_ID" Type="int" />
+    <Property Name="Product2_Qty" Type="int" />
+    <Property Name="Product3_ID" Type="int" />
+    <Property Name="Product3_Qty" Type="int" />
+    <Property Name="Product4_ID" Type="int" />
+    <Property Name="Product4_Qty" Type="int" />
+    <Property Name="Product5_ID" Type="int" />
+    <Property Name="Product5_Qty" Type="int" />
+    <Property Name="Product6_ID" Type="int" />
+    <Property Name="Product6_Qty" Type="int" />
+    <Property Name="Product7_ID" Type="int" />
+    <Property Name="Product7_Qty" Type="int" />
+    <Property Name="Product8_ID" Type="int" />
+    <Property Name="Product8_Qty" Type="int" />
+    <Property Name="Product9_ID" Type="int" />
+    <Property Name="Product9_Qty" Type="int" />
+    <Property Name="Product10_ID" Type="int" />
+    <Property Name="Product10_Qty" Type="int" />
+    <Property Name="Product1_display" Type="int" />
+    <Property Name="Product2_display" Type="int" />
+    <Property Name="Product3_display" Type="int" />
+    <Property Name="Product4_display" Type="int" />
+    <Property Name="Product5_display" Type="int" />
+    <Property Name="Product6_display" Type="int" />
+    <Property Name="Product7_display" Type="int" />
+    <Property Name="Product8_display" Type="int" />
+    <Property Name="Product9_display" Type="int" />
+    <Property Name="Product10_display" Type="int" />
+  </EntityType>
+  <EntityType Name="schedule">
+    <Key>
+      <PropertyRef Name="dateofservice" />
+      <PropertyRef Name="SessionID" />
+    </Key>
+    <Property Name="dateofservice" Type="date" Nullable="false" />
+    <Property Name="SessionID" Type="int" Nullable="false" />
+    <Property Name="D_staffID" Type="int" Nullable="false" />
+    <Property Name="D_staff2ID" Type="int" Nullable="false" />
+    <Property Name="I_staffID" Type="int" Nullable="false" />
+    <Property Name="I_staffID2" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="session">
+    <Key>
+      <PropertyRef Name="Session" />
+    </Key>
+    <Property Name="Session" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SessionTime" Type="varchar" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="shoprecovery">
+    <Key>
+      <PropertyRef Name="recoveryid" />
+    </Key>
+    <Property Name="recoveryid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ProductID" Type="int" Nullable="false" />
+    <Property Name="StoreID" Type="int" Nullable="false" />
+    <Property Name="Quanity" Type="int" Nullable="false" />
+    <Property Name="status" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Reason" Type="varchar" MaxLength="100" />
+    <Property Name="dateofcreate" Type="date" Nullable="false" />
+    <Property Name="dateofrecover" Type="date" />
+  </EntityType>
+  <EntityType Name="soldproduct">
+    <Key>
+      <PropertyRef Name="soldproductid" />
+    </Key>
+    <Property Name="soldproductid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SaleorderID" Type="int" Nullable="false" />
+    <Property Name="productID" Type="int" Nullable="false" />
+    <Property Name="ProductPrePrice" Type="double" Nullable="false" />
+    <Property Name="Quantity" Type="int" Nullable="false" />
+    <Property Name="Displayed" Type="int" Nullable="false" />
+    <Property Name="TotalAmount" Type="double" Nullable="false" />
+    <Property Name="Able" Type="varchar" MaxLength="30" Nullable="false" />
+  </EntityType>
+  <EntityType Name="staff">
+    <Key>
+      <PropertyRef Name="StaffID" />
+    </Key>
+    <Property Name="StaffID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="HKID" Type="varchar" MaxLength="16" />
+    <Property Name="Username" Type="varchar" MaxLength="24" Nullable="false" />
+    <Property Name="Firstname" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="Lastname" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="Password" Type="varchar" MaxLength="32" Nullable="false" />
+    <Property Name="PhoneNumber" Type="varchar" MaxLength="14" Nullable="false" />
+    <Property Name="EmailAddress" Type="varchar" MaxLength="30" />
+    <Property Name="Region" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="AddressLine1" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="AddressLine2" Type="varchar" MaxLength="50" />
+    <Property Name="AddressLine3" Type="varchar" MaxLength="50" />
+    <Property Name="Gender" Type="varchar" MaxLength="1" Nullable="false" />
+    <Property Name="DepartmentID" Type="int" />
+    <Property Name="StoreID" Type="int" />
+    <Property Name="BrithDate" Type="date" />
+  </EntityType>
+  <EntityType Name="store">
+    <Key>
+      <PropertyRef Name="StoreID" />
+    </Key>
+    <Property Name="StoreID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="StoreName" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="StoreManager" Type="int" />
+    <Property Name="Phonenumber" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="Address1" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Address2" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Address3" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Region" Type="varchar" MaxLength="60" Nullable="false" />
+    <Property Name="Available" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="supplier">
+    <Key>
+      <PropertyRef Name="SupplierID" />
+    </Key>
+    <Property Name="SupplierID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SupplierName" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="Address1" Type="varchar" MaxLength="70" Nullable="false" />
+    <Property Name="Address2" Type="varchar" MaxLength="70" />
+    <Property Name="Address3" Type="varchar" MaxLength="70" />
+    <Property Name="PhoneNumber" Type="varchar" MaxLength="13" Nullable="false" />
+    <Property Name="Available" Type="int" Nullable="false" />
+    <Property Name="Region" Type="varchar" MaxLength="30" Nullable="false" />
+  </EntityType>
+  <EntityType Name="type">
+    <Key>
+      <PropertyRef Name="TypeID" />
+    </Key>
+    <Property Name="TypeID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TypeName" Type="varchar" MaxLength="30" Nullable="false" />
+  </EntityType>
+  <Association Name="ForeignKey_DCustomerID">
+    <End Role="customer" Type="Self.customer" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="deliveryorder" Type="Self.deliveryorder" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="customer">
+        <PropertyRef Name="CustomerID" />
+      </Principal>
+      <Dependent Role="deliveryorder">
+        <PropertyRef Name="CustomerID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ForeignKey_DepartmentID">
+    <End Role="department" Type="Self.department" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="staff" Type="Self.staff" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="department">
+        <PropertyRef Name="DepartmentID" />
+      </Principal>
+      <Dependent Role="staff">
+        <PropertyRef Name="DepartmentID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ForeignKey_DProductID10">
+    <End Role="product" Type="Self.product" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="deliveryorder" Type="Self.deliveryorder" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="product">
+        <PropertyRef Name="ProductID" />
+      </Principal>
+      <Dependent Role="deliveryorder">
+        <PropertyRef Name="DeliveryProductID_10" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ForeignKey_DProductID2">
+    <End Role="product" Type="Self.product" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="deliveryorder" Type="Self.deliveryorder" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="product">
+        <PropertyRef Name="ProductID" />
+      </Principal>
+      <Dependent Role="deliveryorder">
+        <PropertyRef Name="DeliveryProductID_2" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ForeignKey_DProductID3">
+    <End Role="product" Type="Self.product" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="deliveryorder" Type="Self.deliveryorder" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="product">
+        <PropertyRef Name="ProductID" />
+      </Principal>
+      <Dependent Role="deliveryorder">
+        <PropertyRef Name="DeliveryProductID_3" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ForeignKey_DProductID4">
+    <End Role="product" Type="Self.product" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="deliveryorder" Type="Self.deliveryorder" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="product">
+        <PropertyRef Name="ProductID" />
+      </Principal>
+      <Dependent Role="deliveryorder">
+        <PropertyRef Name="DeliveryProductID_4" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ForeignKey_DProductID5">
+    <End Role="product" Type="Self.product" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="deliveryorder" Type="Self.deliveryorder" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="product">
+        <PropertyRef Name="ProductID" />
+      </Principal>
+      <Dependent Role="deliveryorder">
+        <PropertyRef Name="DeliveryProductID_5" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ForeignKey_DProductID6">
+    <End Role="product" Type="Self.product" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="deliveryorder" Type="Self.deliveryorder" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="product">
+        <PropertyRef Name="ProductID" />
+      </Principal>
+      <Dependent Role="deliveryorder">
+        <PropertyRef Name="DeliveryProductID_6" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ForeignKey_DProductID7">
+    <End Role="product" Type="Self.product" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="deliveryorder" Type="Self.deliveryorder" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="product">
+        <PropertyRef Name="ProductID" />
+      </Principal>
+      <Dependent Role="deliveryorder">
+        <PropertyRef Name="DeliveryProductID_7" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ForeignKey_DProductID8">
+    <End Role="product" Type="Self.product" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="deliveryorder" Type="Self.deliveryorder" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="product">
+        <PropertyRef Name="ProductID" />
+      </Principal>
+      <Dependent Role="deliveryorder">
+        <PropertyRef Name="DeliveryProductID_8" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ForeignKey_DProductID9">
+    <End Role="product" Type="Self.product" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="deliveryorder" Type="Self.deliveryorder" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="product">
+        <PropertyRef Name="ProductID" />
+      </Principal>
+      <Dependent Role="deliveryorder">
+        <PropertyRef Name="DeliveryProductID_9" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <!--Errors Found During Generation:
+warning 6035: The relationship 'ForeignKey_DWorkerID' has columns that are not part of the key of the table on the primary side of the relationship. The relationship was excluded.
+        <Association Name="ForeignKey_DWorkerID" />-->
+  <Association Name="ForeignKey_iProductID1">
+    <End Role="product" Type="Self.product" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="installationorder" Type="Self.installationorder" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="product">
+        <PropertyRef Name="ProductID" />
+      </Principal>
+      <Dependent Role="installationorder">
+        <PropertyRef Name="InstallProduct1" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ForeignKey_iProductID10">
+    <End Role="product" Type="Self.product" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="installationorder" Type="Self.installationorder" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="product">
+        <PropertyRef Name="ProductID" />
+      </Principal>
+      <Dependent Role="installationorder">
+        <PropertyRef Name="InstallProduct10" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ForeignKey_iProductID2">
+    <End Role="product" Type="Self.product" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="installationorder" Type="Self.installationorder" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="product">
+        <PropertyRef Name="ProductID" />
+      </Principal>
+      <Dependent Role="installationorder">
+        <PropertyRef Name="InstallProduct2" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ForeignKey_iProductID3">
+    <End Role="product" Type="Self.product" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="installationorder" Type="Self.installationorder" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="product">
+        <PropertyRef Name="ProductID" />
+      </Principal>
+      <Dependent Role="installationorder">
+        <PropertyRef Name="InstallProduct3" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ForeignKey_iProductID4">
+    <End Role="product" Type="Self.product" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="installationorder" Type="Self.installationorder" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="product">
+        <PropertyRef Name="ProductID" />
+      </Principal>
+      <Dependent Role="installationorder">
+        <PropertyRef Name="InstallProduct4" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ForeignKey_iProductID5">
+    <End Role="product" Type="Self.product" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="installationorder" Type="Self.installationorder" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="product">
+        <PropertyRef Name="ProductID" />
+      </Principal>
+      <Dependent Role="installationorder">
+        <PropertyRef Name="InstallProduct5" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ForeignKey_iProductID6">
+    <End Role="product" Type="Self.product" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="installationorder" Type="Self.installationorder" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="product">
+        <PropertyRef Name="ProductID" />
+      </Principal>
+      <Dependent Role="installationorder">
+        <PropertyRef Name="InstallProduct6" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ForeignKey_iProductID7">
+    <End Role="product" Type="Self.product" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="installationorder" Type="Self.installationorder" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="product">
+        <PropertyRef Name="ProductID" />
+      </Principal>
+      <Dependent Role="installationorder">
+        <PropertyRef Name="InstallProduct7" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ForeignKey_iProductID8">
+    <End Role="product" Type="Self.product" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="installationorder" Type="Self.installationorder" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="product">
+        <PropertyRef Name="ProductID" />
+      </Principal>
+      <Dependent Role="installationorder">
+        <PropertyRef Name="InstallProduct8" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ForeignKey_iProductID9">
+    <End Role="product" Type="Self.product" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="installationorder" Type="Self.installationorder" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="product">
+        <PropertyRef Name="ProductID" />
+      </Principal>
+      <Dependent Role="installationorder">
+        <PropertyRef Name="InstallProduct9" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <!--Errors Found During Generation:
+warning 6035: The relationship 'ForeignKey_IWorker' has columns that are not part of the key of the table on the primary side of the relationship. The relationship was excluded.
+        <Association Name="ForeignKey_IWorker" />-->
+  <Association Name="ForeignKey_ProductID">
+    <End Role="product" Type="Self.product" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="purchaseitem" Type="Self.purchaseitem" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="product">
+        <PropertyRef Name="ProductID" />
+      </Principal>
+      <Dependent Role="purchaseitem">
+        <PropertyRef Name="ProductID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ForeignKey_ProductID1">
+    <End Role="product" Type="Self.product" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="reorder" Type="Self.reorder" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="product">
+        <PropertyRef Name="ProductID" />
+      </Principal>
+      <Dependent Role="reorder">
+        <PropertyRef Name="Product1" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ForeignKey_ProductID10">
+    <End Role="product" Type="Self.product" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="reorder" Type="Self.reorder" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="product">
+        <PropertyRef Name="ProductID" />
+      </Principal>
+      <Dependent Role="reorder">
+        <PropertyRef Name="Product10" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ForeignKey_ProductID2">
+    <End Role="product" Type="Self.product" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="reorder" Type="Self.reorder" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="product">
+        <PropertyRef Name="ProductID" />
+      </Principal>
+      <Dependent Role="reorder">
+        <PropertyRef Name="Product2" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ForeignKey_ProductID3">
+    <End Role="product" Type="Self.product" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="reorder" Type="Self.reorder" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="product">
+        <PropertyRef Name="ProductID" />
+      </Principal>
+      <Dependent Role="reorder">
+        <PropertyRef Name="Product3" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ForeignKey_ProductID4">
+    <End Role="product" Type="Self.product" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="reorder" Type="Self.reorder" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="product">
+        <PropertyRef Name="ProductID" />
+      </Principal>
+      <Dependent Role="reorder">
+        <PropertyRef Name="Product4" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ForeignKey_ProductID5">
+    <End Role="product" Type="Self.product" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="reorder" Type="Self.reorder" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="product">
+        <PropertyRef Name="ProductID" />
+      </Principal>
+      <Dependent Role="reorder">
+        <PropertyRef Name="Product5" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ForeignKey_ProductID6">
+    <End Role="product" Type="Self.product" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="reorder" Type="Self.reorder" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="product">
+        <PropertyRef Name="ProductID" />
+      </Principal>
+      <Dependent Role="reorder">
+        <PropertyRef Name="Product6" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ForeignKey_ProductID7">
+    <End Role="product" Type="Self.product" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="reorder" Type="Self.reorder" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="product">
+        <PropertyRef Name="ProductID" />
+      </Principal>
+      <Dependent Role="reorder">
+        <PropertyRef Name="Product7" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ForeignKey_ProductID8">
+    <End Role="product" Type="Self.product" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="reorder" Type="Self.reorder" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="product">
+        <PropertyRef Name="ProductID" />
+      </Principal>
+      <Dependent Role="reorder">
+        <PropertyRef Name="Product8" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ForeignKey_ProductID9">
+    <End Role="product" Type="Self.product" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="reorder" Type="Self.reorder" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="product">
+        <PropertyRef Name="ProductID" />
+      </Principal>
+      <Dependent Role="reorder">
+        <PropertyRef Name="Product9" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ForeignKey_PurchaseOrderID">
+    <End Role="purchasingorder" Type="Self.purchasingorder" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="purchaseitem" Type="Self.purchaseitem" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="purchasingorder">
+        <PropertyRef Name="purchasingorderID" />
+      </Principal>
+      <Dependent Role="purchaseitem">
+        <PropertyRef Name="PurchaseOrderID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ForeignKey_Session">
+    <End Role="session" Type="Self.session" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="schedule" Type="Self.schedule" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="session">
+        <PropertyRef Name="Session" />
+      </Principal>
+      <Dependent Role="schedule">
+        <PropertyRef Name="SessionID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ForeignKey_SessionID">
+    <End Role="session" Type="Self.session" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="deliveryorder" Type="Self.deliveryorder" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="session">
+        <PropertyRef Name="Session" />
+      </Principal>
+      <Dependent Role="deliveryorder">
+        <PropertyRef Name="SessionID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ForeignKey_StaffID">
+    <End Role="staff" Type="Self.staff" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="purchasingorder" Type="Self.purchasingorder" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="staff">
+        <PropertyRef Name="StaffID" />
+      </Principal>
+      <Dependent Role="purchasingorder">
+        <PropertyRef Name="StaffID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ForeignKey_StaffID_D">
+    <End Role="staff" Type="Self.staff" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="schedule" Type="Self.schedule" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="staff">
+        <PropertyRef Name="StaffID" />
+      </Principal>
+      <Dependent Role="schedule">
+        <PropertyRef Name="D_staffID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ForeignKey_StaffID_D1">
+    <End Role="staff" Type="Self.staff" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="schedule" Type="Self.schedule" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="staff">
+        <PropertyRef Name="StaffID" />
+      </Principal>
+      <Dependent Role="schedule">
+        <PropertyRef Name="D_staff2ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ForeignKey_StaffID_I1">
+    <End Role="staff" Type="Self.staff" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="schedule" Type="Self.schedule" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="staff">
+        <PropertyRef Name="StaffID" />
+      </Principal>
+      <Dependent Role="schedule">
+        <PropertyRef Name="I_staffID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ForeignKey_StaffID_I2">
+    <End Role="staff" Type="Self.staff" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="schedule" Type="Self.schedule" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="staff">
+        <PropertyRef Name="StaffID" />
+      </Principal>
+      <Dependent Role="schedule">
+        <PropertyRef Name="I_staffID2" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ForeignKey_SupplierID">
+    <End Role="supplier" Type="Self.supplier" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="product" Type="Self.product" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="supplier">
+        <PropertyRef Name="SupplierID" />
+      </Principal>
+      <Dependent Role="product">
+        <PropertyRef Name="SupplierID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ForeignKey_TypeID">
+    <End Role="type" Type="Self.type" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="product" Type="Self.product" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="type">
+        <PropertyRef Name="TypeID" />
+      </Principal>
+      <Dependent Role="product">
+        <PropertyRef Name="TypeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="betterlimitedModelStoreContainer">
+    <EntitySet Name="customer" EntityType="Self.customer" Schema="betterlimited" store:Type="Tables" />
+    <EntitySet Name="defectitem" EntityType="Self.defectitem" Schema="betterlimited" store:Type="Tables" />
+    <EntitySet Name="deliveryorder" EntityType="Self.deliveryorder" Schema="betterlimited" store:Type="Tables" />
+    <EntitySet Name="department" EntityType="Self.department" Schema="betterlimited" store:Type="Tables" />
+    <EntitySet Name="installationorder" EntityType="Self.installationorder" Schema="betterlimited" store:Type="Tables" />
+    <EntitySet Name="product" EntityType="Self.product" Schema="betterlimited" store:Type="Tables" />
+    <EntitySet Name="purchaseitem" EntityType="Self.purchaseitem" Schema="betterlimited" store:Type="Tables" />
+    <EntitySet Name="purchasingorder" EntityType="Self.purchasingorder" Schema="betterlimited" store:Type="Tables" />
+    <EntitySet Name="reorder" EntityType="Self.reorder" Schema="betterlimited" store:Type="Tables" />
+    <EntitySet Name="saleorder" EntityType="Self.saleorder" Schema="betterlimited" store:Type="Tables" />
+    <EntitySet Name="schedule" EntityType="Self.schedule" Schema="betterlimited" store:Type="Tables" />
+    <EntitySet Name="session" EntityType="Self.session" Schema="betterlimited" store:Type="Tables" />
+    <EntitySet Name="shoprecovery" EntityType="Self.shoprecovery" Schema="betterlimited" store:Type="Tables" />
+    <EntitySet Name="soldproduct" EntityType="Self.soldproduct" Schema="betterlimited" store:Type="Tables" />
+    <EntitySet Name="staff" EntityType="Self.staff" Schema="betterlimited" store:Type="Tables" />
+    <EntitySet Name="store" EntityType="Self.store" Schema="betterlimited" store:Type="Tables" />
+    <EntitySet Name="supplier" EntityType="Self.supplier" Schema="betterlimited" store:Type="Tables" />
+    <EntitySet Name="type" EntityType="Self.type" Schema="betterlimited" store:Type="Tables" />
+    <AssociationSet Name="ForeignKey_DCustomerID" Association="Self.ForeignKey_DCustomerID">
+      <End Role="customer" EntitySet="customer" />
+      <End Role="deliveryorder" EntitySet="deliveryorder" />
+    </AssociationSet>
+    <AssociationSet Name="ForeignKey_DepartmentID" Association="Self.ForeignKey_DepartmentID">
+      <End Role="department" EntitySet="department" />
+      <End Role="staff" EntitySet="staff" />
+    </AssociationSet>
+    <AssociationSet Name="ForeignKey_DProductID10" Association="Self.ForeignKey_DProductID10">
+      <End Role="product" EntitySet="product" />
+      <End Role="deliveryorder" EntitySet="deliveryorder" />
+    </AssociationSet>
+    <AssociationSet Name="ForeignKey_DProductID2" Association="Self.ForeignKey_DProductID2">
+      <End Role="product" EntitySet="product" />
+      <End Role="deliveryorder" EntitySet="deliveryorder" />
+    </AssociationSet>
+    <AssociationSet Name="ForeignKey_DProductID3" Association="Self.ForeignKey_DProductID3">
+      <End Role="product" EntitySet="product" />
+      <End Role="deliveryorder" EntitySet="deliveryorder" />
+    </AssociationSet>
+    <AssociationSet Name="ForeignKey_DProductID4" Association="Self.ForeignKey_DProductID4">
+      <End Role="product" EntitySet="product" />
+      <End Role="deliveryorder" EntitySet="deliveryorder" />
+    </AssociationSet>
+    <AssociationSet Name="ForeignKey_DProductID5" Association="Self.ForeignKey_DProductID5">
+      <End Role="product" EntitySet="product" />
+      <End Role="deliveryorder" EntitySet="deliveryorder" />
+    </AssociationSet>
+    <AssociationSet Name="ForeignKey_DProductID6" Association="Self.ForeignKey_DProductID6">
+      <End Role="product" EntitySet="product" />
+      <End Role="deliveryorder" EntitySet="deliveryorder" />
+    </AssociationSet>
+    <AssociationSet Name="ForeignKey_DProductID7" Association="Self.ForeignKey_DProductID7">
+      <End Role="product" EntitySet="product" />
+      <End Role="deliveryorder" EntitySet="deliveryorder" />
+    </AssociationSet>
+    <AssociationSet Name="ForeignKey_DProductID8" Association="Self.ForeignKey_DProductID8">
+      <End Role="product" EntitySet="product" />
+      <End Role="deliveryorder" EntitySet="deliveryorder" />
+    </AssociationSet>
+    <AssociationSet Name="ForeignKey_DProductID9" Association="Self.ForeignKey_DProductID9">
+      <End Role="product" EntitySet="product" />
+      <End Role="deliveryorder" EntitySet="deliveryorder" />
+    </AssociationSet>
+    <AssociationSet Name="ForeignKey_iProductID1" Association="Self.ForeignKey_iProductID1">
+      <End Role="product" EntitySet="product" />
+      <End Role="installationorder" EntitySet="installationorder" />
+    </AssociationSet>
+    <AssociationSet Name="ForeignKey_iProductID10" Association="Self.ForeignKey_iProductID10">
+      <End Role="product" EntitySet="product" />
+      <End Role="installationorder" EntitySet="installationorder" />
+    </AssociationSet>
+    <AssociationSet Name="ForeignKey_iProductID2" Association="Self.ForeignKey_iProductID2">
+      <End Role="product" EntitySet="product" />
+      <End Role="installationorder" EntitySet="installationorder" />
+    </AssociationSet>
+    <AssociationSet Name="ForeignKey_iProductID3" Association="Self.ForeignKey_iProductID3">
+      <End Role="product" EntitySet="product" />
+      <End Role="installationorder" EntitySet="installationorder" />
+    </AssociationSet>
+    <AssociationSet Name="ForeignKey_iProductID4" Association="Self.ForeignKey_iProductID4">
+      <End Role="product" EntitySet="product" />
+      <End Role="installationorder" EntitySet="installationorder" />
+    </AssociationSet>
+    <AssociationSet Name="ForeignKey_iProductID5" Association="Self.ForeignKey_iProductID5">
+      <End Role="product" EntitySet="product" />
+      <End Role="installationorder" EntitySet="installationorder" />
+    </AssociationSet>
+    <AssociationSet Name="ForeignKey_iProductID6" Association="Self.ForeignKey_iProductID6">
+      <End Role="product" EntitySet="product" />
+      <End Role="installationorder" EntitySet="installationorder" />
+    </AssociationSet>
+    <AssociationSet Name="ForeignKey_iProductID7" Association="Self.ForeignKey_iProductID7">
+      <End Role="product" EntitySet="product" />
+      <End Role="installationorder" EntitySet="installationorder" />
+    </AssociationSet>
+    <AssociationSet Name="ForeignKey_iProductID8" Association="Self.ForeignKey_iProductID8">
+      <End Role="product" EntitySet="product" />
+      <End Role="installationorder" EntitySet="installationorder" />
+    </AssociationSet>
+    <AssociationSet Name="ForeignKey_iProductID9" Association="Self.ForeignKey_iProductID9">
+      <End Role="product" EntitySet="product" />
+      <End Role="installationorder" EntitySet="installationorder" />
+    </AssociationSet>
+    <AssociationSet Name="ForeignKey_ProductID" Association="Self.ForeignKey_ProductID">
+      <End Role="product" EntitySet="product" />
+      <End Role="purchaseitem" EntitySet="purchaseitem" />
+    </AssociationSet>
+    <AssociationSet Name="ForeignKey_ProductID1" Association="Self.ForeignKey_ProductID1">
+      <End Role="product" EntitySet="product" />
+      <End Role="reorder" EntitySet="reorder" />
+    </AssociationSet>
+    <AssociationSet Name="ForeignKey_ProductID10" Association="Self.ForeignKey_ProductID10">
+      <End Role="product" EntitySet="product" />
+      <End Role="reorder" EntitySet="reorder" />
+    </AssociationSet>
+    <AssociationSet Name="ForeignKey_ProductID2" Association="Self.ForeignKey_ProductID2">
+      <End Role="product" EntitySet="product" />
+      <End Role="reorder" EntitySet="reorder" />
+    </AssociationSet>
+    <AssociationSet Name="ForeignKey_ProductID3" Association="Self.ForeignKey_ProductID3">
+      <End Role="product" EntitySet="product" />
+      <End Role="reorder" EntitySet="reorder" />
+    </AssociationSet>
+    <AssociationSet Name="ForeignKey_ProductID4" Association="Self.ForeignKey_ProductID4">
+      <End Role="product" EntitySet="product" />
+      <End Role="reorder" EntitySet="reorder" />
+    </AssociationSet>
+    <AssociationSet Name="ForeignKey_ProductID5" Association="Self.ForeignKey_ProductID5">
+      <End Role="product" EntitySet="product" />
+      <End Role="reorder" EntitySet="reorder" />
+    </AssociationSet>
+    <AssociationSet Name="ForeignKey_ProductID6" Association="Self.ForeignKey_ProductID6">
+      <End Role="product" EntitySet="product" />
+      <End Role="reorder" EntitySet="reorder" />
+    </AssociationSet>
+    <AssociationSet Name="ForeignKey_ProductID7" Association="Self.ForeignKey_ProductID7">
+      <End Role="product" EntitySet="product" />
+      <End Role="reorder" EntitySet="reorder" />
+    </AssociationSet>
+    <AssociationSet Name="ForeignKey_ProductID8" Association="Self.ForeignKey_ProductID8">
+      <End Role="product" EntitySet="product" />
+      <End Role="reorder" EntitySet="reorder" />
+    </AssociationSet>
+    <AssociationSet Name="ForeignKey_ProductID9" Association="Self.ForeignKey_ProductID9">
+      <End Role="product" EntitySet="product" />
+      <End Role="reorder" EntitySet="reorder" />
+    </AssociationSet>
+    <AssociationSet Name="ForeignKey_PurchaseOrderID" Association="Self.ForeignKey_PurchaseOrderID">
+      <End Role="purchasingorder" EntitySet="purchasingorder" />
+      <End Role="purchaseitem" EntitySet="purchaseitem" />
+    </AssociationSet>
+    <AssociationSet Name="ForeignKey_Session" Association="Self.ForeignKey_Session">
+      <End Role="session" EntitySet="session" />
+      <End Role="schedule" EntitySet="schedule" />
+    </AssociationSet>
+    <AssociationSet Name="ForeignKey_SessionID" Association="Self.ForeignKey_SessionID">
+      <End Role="session" EntitySet="session" />
+      <End Role="deliveryorder" EntitySet="deliveryorder" />
+    </AssociationSet>
+    <AssociationSet Name="ForeignKey_StaffID" Association="Self.ForeignKey_StaffID">
+      <End Role="staff" EntitySet="staff" />
+      <End Role="purchasingorder" EntitySet="purchasingorder" />
+    </AssociationSet>
+    <AssociationSet Name="ForeignKey_StaffID_D" Association="Self.ForeignKey_StaffID_D">
+      <End Role="staff" EntitySet="staff" />
+      <End Role="schedule" EntitySet="schedule" />
+    </AssociationSet>
+    <AssociationSet Name="ForeignKey_StaffID_D1" Association="Self.ForeignKey_StaffID_D1">
+      <End Role="staff" EntitySet="staff" />
+      <End Role="schedule" EntitySet="schedule" />
+    </AssociationSet>
+    <AssociationSet Name="ForeignKey_StaffID_I1" Association="Self.ForeignKey_StaffID_I1">
+      <End Role="staff" EntitySet="staff" />
+      <End Role="schedule" EntitySet="schedule" />
+    </AssociationSet>
+    <AssociationSet Name="ForeignKey_StaffID_I2" Association="Self.ForeignKey_StaffID_I2">
+      <End Role="staff" EntitySet="staff" />
+      <End Role="schedule" EntitySet="schedule" />
+    </AssociationSet>
+    <AssociationSet Name="ForeignKey_SupplierID" Association="Self.ForeignKey_SupplierID">
+      <End Role="supplier" EntitySet="supplier" />
+      <End Role="product" EntitySet="product" />
+    </AssociationSet>
+    <AssociationSet Name="ForeignKey_TypeID" Association="Self.ForeignKey_TypeID">
+      <End Role="type" EntitySet="type" />
+      <End Role="product" EntitySet="product" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
